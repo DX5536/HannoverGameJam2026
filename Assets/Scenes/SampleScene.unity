@@ -170,6 +170,8 @@ MonoBehaviour:
   randomSpinDuration: 0.5
   randomSpinTurns: 1
   randomSpinEase: 4
+  landingPunchDuration: 0.5
+  landingPunchEase: 31
   currentAttacker: 0
   onAttackHit:
     m_PersistentCalls:
@@ -2749,6 +2751,8 @@ MonoBehaviour:
     weight: 0.34
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
+  highlightPopDistance: 16
+  highlightBrighten: 0.4
 --- !u!222 &628569354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5908,6 +5912,8 @@ MonoBehaviour:
   randomSpinDuration: 0.5
   randomSpinTurns: 1
   randomSpinEase: 4
+  landingPunchDuration: 0.35
+  landingPunchEase: 27
   currentAttacker: 1
   onAttackHit:
     m_PersistentCalls:
@@ -6809,6 +6815,8 @@ MonoBehaviour:
     weight: 0.2
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
+  highlightPopDistance: 16
+  highlightBrighten: 0.4
 --- !u!1 &1804029831
 GameObject:
   m_ObjectHideFlags: 0

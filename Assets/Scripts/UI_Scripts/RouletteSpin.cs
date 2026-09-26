@@ -110,6 +110,13 @@ public class RouletteSpin : MonoBehaviour
     [Tooltip("Easing for RandomSpin(). OutCubic/OutQuart give a roulette-like fast start that decelerates into the landing.")]
     [SerializeField] private Ease randomSpinEase = Ease.OutCubic;
 
+    [Header("Landing Punch")]
+    [Tooltip("Duration of the pop the landed slice plays so the player can see the result clearly.")]
+    [SerializeField] private float landingPunchDuration = 0.35f;
+
+    [Tooltip("Easing for the landing pop. OutBack overshoots then settles for a punchy feel.")]
+    [SerializeField] private Ease landingPunchEase = Ease.OutBack;
+
     [Header("Attacker")]
     [Tooltip("Who is attacking THIS round. Set automatically by the convenience methods; also drives AttackCounter().")]
     [SerializeField] private Combatant currentAttacker = Combatant.Player;
@@ -128,6 +135,7 @@ public class RouletteSpin : MonoBehaviour
     private bool isSpinning;
     private bool isRandomSpinning;
     private Tween randomSpinTween;
+    private Tween highlightTween;
 
     // Which combatant the CURRENT spin sets a move for, and whether stopping it resolves the round.
     private Combatant moveTarget = Combatant.Enemy;
@@ -174,6 +182,8 @@ public class RouletteSpin : MonoBehaviour
         // Don't let a tween keep running against a disabled/destroyed arrow.
         randomSpinTween?.Kill();
         randomSpinTween = null;
+        highlightTween?.Kill();
+        highlightTween = null;
         isRandomSpinning = false;
     }
 
@@ -291,6 +301,7 @@ public class RouletteSpin : MonoBehaviour
     /// <summary>Sets who the next spin scores for, which side's preferences shape the wheel, and whether stopping resolves.</summary>
     private void ConfigureSpin(Combatant movesFor, Combatant wheelOwner, bool resolveAfter)
     {
+        ClearHighlight(); // remove the previous result's pop before the next spin
         moveTarget = movesFor;
         statsForWeights = wheelOwner;
         weightsFromStats = true; // the wheel always reflects the owner's RPS split (even split when unset)
@@ -298,15 +309,49 @@ public class RouletteSpin : MonoBehaviour
         SyncWheel();
     }
 
-    /// <summary>Runs after any spin lands: record the move, raise the event, and resolve if asked.</summary>
+    /// <summary>Runs after any spin lands: record the move, pop the landed slice, raise the event, and resolve if asked.</summary>
     private void OnSpinLanded()
     {
-        RecordMove(moveTarget, PointedRps());
+        int index = PointedSegmentIndex();
+        Rps move = index >= 0 ? segments[index].rps : Rps.Rock;
+
+        RecordMove(moveTarget, move);
+        PlayLandingPunch(index);
         onSpinLanded?.Invoke();
 
         if (resolveAfterCurrentSpin)
         {
             Resolve();
+        }
+    }
+
+    /// <summary>Pops the landed slice so the player can tell which side the arrow settled on.</summary>
+    private void PlayLandingPunch(int index)
+    {
+        if (wheel == null || index < 0)
+        {
+            return;
+        }
+
+        highlightTween?.Kill();
+        wheel.SetHighlight(index, 0f);
+
+        float amount = 0f;
+        highlightTween = DOTween.To(() => amount, v =>
+            {
+                amount = v;
+                wheel.SetHighlight(index, v);
+            }, 1f, landingPunchDuration)
+            .SetEase(landingPunchEase);
+    }
+
+    private void ClearHighlight()
+    {
+        highlightTween?.Kill();
+        highlightTween = null;
+        if (wheel != null)
+        {
+            wheel.SetHighlight(-1, 0f);
         }
     }
 
@@ -346,12 +391,19 @@ public class RouletteSpin : MonoBehaviour
     /// <summary>The Rock / Paper / Scissors move the arrow is currently over.</summary>
     public Rps PointedRps()
     {
+        int index = PointedSegmentIndex();
+        return index >= 0 ? segments[index].rps : Rps.Rock;
+    }
+
+    /// <summary>Index of the segment the arrow is currently over, or -1 if the wheel is empty.</summary>
+    public int PointedSegmentIndex()
+    {
         float pointer = PointerAngleClockwise();
         float total = TotalWeight();
 
         if (segments == null || segments.Length == 0 || total <= Mathf.Epsilon)
         {
-            return Rps.Rock;
+            return -1;
         }
 
         float acc = 0f;
@@ -360,11 +412,11 @@ public class RouletteSpin : MonoBehaviour
             float sweep = (EffectiveWeight(i) / total) * 360f;
             if (pointer < acc + sweep || i == segments.Length - 1)
             {
-                return segments[i].rps;
+                return i;
             }
             acc += sweep;
         }
-        return segments[segments.Length - 1].rps;
+        return segments.Length - 1;
     }
 
     /// <summary>

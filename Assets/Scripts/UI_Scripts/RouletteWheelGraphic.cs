@@ -35,6 +35,18 @@ public class RouletteWheelGraphic : MaskableGraphic
     [Range(24, 720)]
     [SerializeField] private int segmentsPerCircle = 180;
 
+    [Header("Landed-slice highlight")]
+    [Tooltip("How far (pixels) the highlighted slice pops outward at full highlight.")]
+    [SerializeField] private float highlightPopDistance = 16f;
+
+    [Tooltip("How much the highlighted slice brightens toward white at full highlight (0-1).")]
+    [Range(0f, 1f)]
+    [SerializeField] private float highlightBrighten = 0.4f;
+
+    // Which slice is highlighted (-1 = none) and how strongly (0 = off, 1 = full, >1 during punch overshoot).
+    private int highlightIndex = -1;
+    private float highlightAmount;
+
     /// <summary>Replaces the slices and redraws. Called by RouletteSpin.</summary>
     public void SetSlices(IList<Slice> newSlices)
     {
@@ -43,6 +55,14 @@ public class RouletteWheelGraphic : MaskableGraphic
         {
             slices.AddRange(newSlices);
         }
+        SetVerticesDirty();
+    }
+
+    /// <summary>Highlights one slice (by list index) with the given strength. index &lt; 0 clears it.</summary>
+    public void SetHighlight(int index, float amount)
+    {
+        highlightIndex = index;
+        highlightAmount = Mathf.Max(0f, amount);
         SetVerticesDirty();
     }
 
@@ -67,18 +87,31 @@ public class RouletteWheelGraphic : MaskableGraphic
 
         Rect r = rectTransform.rect;
         Vector2 center = r.center;
-        float outer = Mathf.Min(r.width, r.height) * 0.5f;
-        float inner = outer * innerRadiusRatio;
+        float baseOuter = Mathf.Min(r.width, r.height) * 0.5f;
+        float baseInner = baseOuter * innerRadiusRatio;
 
         // 0 rad points up; angle increases clockwise.
         float startAngle = 0f;
 
-        foreach (Slice s in slices)
+        for (int sliceIndex = 0; sliceIndex < slices.Count; sliceIndex++)
         {
+            Slice s = slices[sliceIndex];
             float weight = Mathf.Max(0f, s.weight);
             if (weight <= Mathf.Epsilon)
             {
                 continue;
+            }
+
+            // Apply the highlight to this slice only: pop it outward and brighten it.
+            float outer = baseOuter;
+            float inner = baseInner;
+            Color color = s.color;
+            if (sliceIndex == highlightIndex && highlightAmount > 0f)
+            {
+                float pop = highlightPopDistance * highlightAmount;
+                outer = baseOuter + pop;
+                inner = Mathf.Max(0f, baseInner - pop * 0.5f);
+                color = Color.Lerp(s.color, Color.white, Mathf.Clamp01(highlightBrighten * highlightAmount));
             }
 
             float sweep = (weight / totalWeight) * (Mathf.PI * 2f);
@@ -89,7 +122,7 @@ public class RouletteWheelGraphic : MaskableGraphic
             {
                 float a0 = startAngle + step * i;
                 float a1 = startAngle + step * (i + 1);
-                AddQuad(vh, center, inner, outer, a0, a1, s.color);
+                AddQuad(vh, center, inner, outer, a0, a1, color);
             }
 
             startAngle += sweep;
