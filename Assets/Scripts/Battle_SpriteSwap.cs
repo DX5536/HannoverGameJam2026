@@ -3,20 +3,24 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 /// <summary>
-/// Swaps the enemy's *battle* sprite. Unlike <see cref="YarnCommand_SpriteSwap"/>
+/// Swaps a combatant's *battle* sprite. Unlike <see cref="YarnCommand_SpriteSwap"/>
 /// this is NOT registered with Yarn - call the public methods from Unity
 /// (Animation Events, UnityEvents on buttons, other scripts, etc.).
 ///
-/// The sprite is read from <see cref="EnemyStats_ScriptableObject.EnemyBattleSprite"/>.
+/// Works for the enemy or the player: assign ONE stats asset - either an
+/// <see cref="EnemyStats_ScriptableObject"/> (reads enemyBattleSprite) or a
+/// <see cref="PlayerStats_ScriptableObject"/> (reads playerBattleSprite). Put one of
+/// these components on the enemy object and another on the player object.
+///
 /// Each method maps to a named state (IDLE / ATTACK / HIT) instead of an array
-/// index. Array layout expected on the ScriptableObject: 0 = idle, 1 = attack, 2 = hit.
+/// index. Array layout expected on either asset: 0 = idle, 1 = attack, 2 = hit.
 ///
 /// Assign either a <see cref="SpriteRenderer"/> (world space) or a UI
 /// <see cref="Image"/> (canvas) as the display target - whichever is set is used.
 /// </summary>
 public class Battle_SpriteSwap : MonoBehaviour
 {
-    // Index of each state inside EnemyBattleSprite. Change here if the array order ever changes.
+    // Index of each state inside the battle-sprite array. Change here if the order ever changes.
     private enum BattleState
     {
         IDLE = 0,
@@ -24,14 +28,18 @@ public class Battle_SpriteSwap : MonoBehaviour
         HIT = 2,
     }
 
-    [Tooltip("The enemy stats asset that holds enemyBattleSprite.")]
+    [Header("Stats (assign ONE)")]
+    [Tooltip("Assign this when this component drives the ENEMY (reads enemyBattleSprite).")]
     [SerializeField] private EnemyStats_ScriptableObject enemyStats;
 
+    [Tooltip("Assign this when this component drives the PLAYER (reads playerBattleSprite).")]
+    [SerializeField] private PlayerStats_ScriptableObject playerStats;
+
     [Header("Display target (assign one)")]
-    [Tooltip("Use this when the enemy is drawn with a SpriteRenderer in the world.")]
+    [Tooltip("Use this when the combatant is drawn with a SpriteRenderer in the world.")]
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    [Tooltip("Use this when the enemy is a UI Image on a Canvas.")]
+    [Tooltip("Use this when the combatant is a UI Image on a Canvas.")]
     [SerializeField] private Image uiImage;
 
     [Header("Events (hook up SFX / animation here)")]
@@ -63,18 +71,30 @@ public class Battle_SpriteSwap : MonoBehaviour
 
     private void Apply(BattleState state)
     {
-        if (enemyStats == null)
+        // Use whichever stats asset is assigned (player takes priority if both are set).
+        Sprite[] sprites;
+        string sourceName;
+        if (playerStats != null)
         {
-            Debug.LogWarning($"{nameof(Battle_SpriteSwap)}: No EnemyStats assigned.", this);
+            sprites = playerStats.PlayerBattleSprite;
+            sourceName = "playerBattleSprite";
+        }
+        else if (enemyStats != null)
+        {
+            sprites = enemyStats.EnemyBattleSprite;
+            sourceName = "enemyBattleSprite";
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(Battle_SpriteSwap)}: No EnemyStats or PlayerStats assigned.", this);
             return;
         }
 
-        Sprite[] sprites = enemyStats.EnemyBattleSprite;
         int index = (int)state;
 
         if (sprites == null || index < 0 || index >= sprites.Length)
         {
-            Debug.LogWarning($"{nameof(Battle_SpriteSwap)}: enemyBattleSprite has no entry for {state} (index {index}).", this);
+            Debug.LogWarning($"{nameof(Battle_SpriteSwap)}: {sourceName} has no entry for {state} (index {index}).", this);
             return;
         }
 
