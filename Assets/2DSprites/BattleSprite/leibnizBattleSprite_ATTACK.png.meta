@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ed24ec1f28a52542b9fe92dfdd6a3fb
+guid: 84af11593e7277d4b8ccc5c405a13057
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7823552382046960409
-    second: knightStorySprite_MAD_1024x1400_0
+      213: 241447562507705129
+    second: leibnizBattleSprite_ATTACK_1024x1024_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knightStorySprite_MAD_1024x1400_0
+      name: leibnizBattleSprite_ATTACK_1024x1024_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1400
+        x: 1
+        y: 33
+        width: 1023
+        height: 971
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91bf195c077d29c60800000000000000
-      internalID: 7823552382046960409
+      spriteID: 92bd723674bc95300800000000000000
+      internalID: 241447562507705129
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      knightStorySprite_MAD_1024x1400_0: 7823552382046960409
+      leibnizBattleSprite_ATTACK_1024x1024_0: 241447562507705129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

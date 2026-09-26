@@ -10,15 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a811706e0e34b844beff3a607056db5, type: 3}
-  m_Name: oreoEnemy_SO
+  m_Name: knightEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
-  enemyName: OR3O
+  enemyName: Oreon
   enemyHP: 5
   enemyDescription: A very tanky knight
-  enemyBattleSprite: []
-  enemyStorySprite: []
+  enemyBattleSprite:
+  - {fileID: 21300000, guid: 318484c1ef0396f42962baccf89614bf, type: 3}
+  - {fileID: 21300000, guid: c43945b40a29d124ea20008d83901c33, type: 3}
+  enemyStorySprite:
+  - {fileID: 21300000, guid: 5bef8fd21f2d6ba48acbbbb68247f8d2, type: 3}
+  - {fileID: 21300000, guid: 5ed24ec1f28a52542b9fe92dfdd6a3fb, type: 3}
+  - {fileID: 21300000, guid: 9a3dfbd5c5d88db44ab0dcbab8a82dda, type: 3}
   enemyTips: []
   enemyRockValue: 0.5
   enemyPaperValue: 0.3
   enemyScissorsValue: 0.2
   spinSpeed: 0.7
+  currentSpinResult: 
+  currentAction: 

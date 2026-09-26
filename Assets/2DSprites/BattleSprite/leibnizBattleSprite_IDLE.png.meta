@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e8d928e8b3b2a9f4c96443919b315776
+guid: 9442e1e6ea58aee42af7507d2da7a592
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2835230168685831763
-    second: ladyStorySprite_HAPPY_1024x1400_0
+      213: -1779970973541499133
+    second: leibnizBattleSprite_IDLE_1024x1024_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ladyStorySprite_HAPPY_1024x1400_0
+      name: leibnizBattleSprite_IDLE_1024x1024_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 0
-        width: 1019
-        height: 1400
+        x: 26
+        y: 33
+        width: 974
+        height: 945
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da9920bee2d37a8d0800000000000000
-      internalID: -2835230168685831763
+      spriteID: 30f7d8b84d54c47e0800000000000000
+      internalID: -1779970973541499133
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ladyStorySprite_HAPPY_1024x1400_0: -2835230168685831763
+      leibnizBattleSprite_IDLE_1024x1024_0: -1779970973541499133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c792c021260d647be3a640d3625900, type: 3}
   m_Name: _PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats_ScriptableObject
-  playerName: 
-  playerHP: 0
-  playerDescription: 
+  playerName: Me
+  playerHP: 5
+  playerDescription: It's me!
   playerBattleSprite: []
   playerStorySprite: []
   playerRockValue: 0.33
   playerPaperValue: 0.33
   playerScissorsValue: 0.34
   slowdownSpeed: 0
+  currentSpinResult: Scissors
+  currentAction: 

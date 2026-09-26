@@ -10,15 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a811706e0e34b844beff3a607056db5, type: 3}
-  m_Name: waffleEnemy_SO
+  m_Name: ladyEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
-  enemyName: W4FFL3
+  enemyName: Waphelina
   enemyHP: 3
   enemyDescription: Lady waffle
-  enemyBattleSprite: []
-  enemyStorySprite: []
+  enemyBattleSprite:
+  - {fileID: 21300000, guid: 1d9c8deaafbca644b8b00c25a7950eea, type: 3}
+  - {fileID: 21300000, guid: 151c2366092add942aa1ba1b87a34b1d, type: 3}
+  enemyStorySprite:
+  - {fileID: 21300000, guid: d5bc636a5a6a519468e550d912683395, type: 3}
+  - {fileID: 21300000, guid: 9adf51ec2ded0ed438d0808022b5c97c, type: 3}
+  - {fileID: 21300000, guid: e8d928e8b3b2a9f4c96443919b315776, type: 3}
   enemyTips: []
   enemyRockValue: 0.1
   enemyPaperValue: 0.3
   enemyScissorsValue: 0.6
   spinSpeed: 0.5
+  currentSpinResult: 
+  currentAction: 
