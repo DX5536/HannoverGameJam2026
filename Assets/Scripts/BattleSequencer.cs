@@ -80,6 +80,15 @@ public class BattleSequencer : MonoBehaviour
     private float ActiveRandomEnemyChance => sequence != null ? sequence.RandomEnemyChance : randomEnemyChance;
     private float ActiveDelayBetweenTurns => sequence != null ? sequence.DelayBetweenTurns : delayBetweenTurns;
 
+    private void Awake()
+    {
+        // Auto-find so AdvanceTurn can detect a win even if the reference wasn't assigned.
+        if (battleResolver == null)
+        {
+            battleResolver = FindFirstObjectByType<BattleResolver>();
+        }
+    }
+
     private void Start()
     {
         if (autoStart)

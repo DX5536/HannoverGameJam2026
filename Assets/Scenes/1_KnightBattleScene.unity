@@ -1772,7 +1772,7 @@ MonoBehaviour:
   loops: 1
   id: 
   isRelative: 0
-  isFrom: 1
+  isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
   autoGenerate: 0
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   forcedTargetType: 0
   autoPlay: 1
   useTargetAsV3: 0
-  endValueFloat: 0
+  endValueFloat: 1
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2205,8 +2205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxSource: {fileID: 1071753879}
-  buttonPress: {fileID: 8300000, guid: 0dae724cb893d234693f768c9f4c20b9, type: 3}
-  attackSFX: {fileID: 8300000, guid: cb4f09b8fd1ec8145b52bd9ca21d861c, type: 3}
+  buttonPress: {fileID: 8300000, guid: e6100cf2d61a43a4783236a3ef472d79, type: 3}
+  attackSFX: {fileID: 8300000, guid: f618bdfed8530074994e54eed8d0178d, type: 3}
   blockSFX: {fileID: 8300000, guid: 25c6d67fb6b4baf43889d5d1b2d77e21, type: 3}
   damageSFX: {fileID: 8300000, guid: f618bdfed8530074994e54eed8d0178d, type: 3}
   musicSource: {fileID: 1604348018}
@@ -2376,6 +2376,7 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
   enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
   currentAttacker: 0
+  winEventDelay: 2
   onAttackHit:
     m_PersistentCalls:
       m_Calls:
@@ -2729,6 +2730,7 @@ RectTransform:
   - {fileID: 1882064221}
   - {fileID: 403727263}
   - {fileID: 665676964}
+  - {fileID: 1952322157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2828,6 +2830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a5bd7c375f71343b07466cf6011778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSequencer
+  battleResolver: {fileID: 1100502880}
   sequence: {fileID: 11400000, guid: c422e95c6c284854ca2bb9b0d1cdfd55, type: 2}
   mode: 0
   firstAttacker: 0
@@ -3418,7 +3421,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4546,6 +4549,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1882064226}
+        m_TargetAssemblyTypeName: Dott.DOTweenTimeline, Dott
+        m_MethodName: DOPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   pauseKey: 60
   pausePanel: {fileID: 0}
   freezeTimeWhilePaused: 1
@@ -4748,7 +4763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: -120, y: 300}
   m_SizeDelta: {x: 512, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882064222
@@ -5077,6 +5092,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942290545}
+  m_CullTransparentMesh: 1
+--- !u!1 &1952322156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952322157}
+  - component: {fileID: 1952322159}
+  - component: {fileID: 1952322158}
+  m_Layer: 5
+  m_Name: RockPaperScissor_IMG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1952322157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952322156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1225701991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 300, y: 300}
+  m_SizeDelta: {x: 500, y: 450}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1952322158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952322156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 73f417bebad40a941ba511f1bebaffbd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1952322159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952322156}
   m_CullTransparentMesh: 1
 --- !u!1 &1968684531
 GameObject:
@@ -9600,7 +9690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEnd
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -10280,7 +10370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEND
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -10719,7 +10809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEND
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -10905,7 +10995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEnd
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -11156,7 +11246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEND
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -11339,7 +11429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
   id: turnEnd
-  delay: 2
+  delay: 1.8
   onCallback:
     m_PersistentCalls:
       m_Calls:

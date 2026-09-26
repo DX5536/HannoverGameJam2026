@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -35,6 +36,10 @@ public class BattleResolver : MonoBehaviour
     [Header("Attacker")]
     [Tooltip("Who is attacking THIS round. Set automatically by the phase methods.")]
     [SerializeField] private RouletteSpin.Combatant currentAttacker = RouletteSpin.Combatant.Player;
+
+    [Header("Win timing")]
+    [Tooltip("Seconds to wait after the killing blow before onPlayerWin / onEnemyWin fire, so the hit/win animation can play first. Try 0.5-1.5. (The battle still STOPS immediately; only the win event is delayed.)")]
+    [SerializeField] private float winEventDelay = 1f;
 
     [Header("Outcome events (any attacker - shared SFX / HP bar)")]
     [Tooltip("Attacker landed a hit (defender lost HP). Fires no matter who attacked.")]
@@ -246,14 +251,27 @@ public class BattleResolver : MonoBehaviour
         }
     }
 
-    /// <summary>Records the winner and fires the shared + winner-specific events.</summary>
+    /// <summary>Records the winner immediately, then fires the winner event after a short delay.</summary>
     private void HandleDefeat(RouletteSpin.Combatant loser)
     {
-        BattleOver = true;
+        BattleOver = true;                 // set NOW so the sequencer stops the next round immediately
         Winner = Opponent(loser);
 
-        onHpReachedZero?.Invoke();
+        onHpReachedZero?.Invoke();         // shared "fight over" hook (fires immediately)
 
+        // Delay only the win/lose animation so the killing-blow animation can play first.
+        if (winEventDelay <= 0f)
+        {
+            FireWinEvent();
+        }
+        else
+        {
+            DOVirtual.DelayedCall(winEventDelay, FireWinEvent);
+        }
+    }
+
+    private void FireWinEvent()
+    {
         if (Winner == RouletteSpin.Combatant.Player)
         {
             onPlayerWin?.Invoke();
