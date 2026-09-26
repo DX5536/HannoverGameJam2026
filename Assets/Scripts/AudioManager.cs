@@ -37,9 +37,31 @@ public class AudioManager : MonoBehaviour
     [Tooltip("Play the standard BGM automatically on Start().")]
     [SerializeField] private bool playStandardBgmOnStart = true;
 
+    [Header("Volume (UI slider 0-1 maps to these maxima)")]
+    [Tooltip("Actual AudioSource volume when the SFX slider is at 1.")]
+    [Range(0f, 1f)]
+    [SerializeField] private float sfxMaxVolume = 1f;
+
+    [Tooltip("Actual AudioSource volume when the Music slider is at 1. Music is loud, so keep this low (e.g. 0.1).")]
+    [Range(0f, 1f)]
+    [SerializeField] private float musicMaxVolume = 0.1f;
+
     [Header("Behaviour")]
     [Tooltip("Keep this manager alive across scene loads.")]
     [SerializeField] private bool persistAcrossScenes = true;
+
+    private const string SfxPrefKey = "vol_sfx01";
+    private const string MusicPrefKey = "vol_music01";
+
+    // 0-1 UI values (what the sliders show). Actual source volume = value * maxVolume.
+    private float sfxVolume01 = 1f;
+    private float musicVolume01 = 1f;
+
+    /// <summary>Current SFX slider value (0-1).</summary>
+    public float SfxVolume01 => sfxVolume01;
+
+    /// <summary>Current Music slider value (0-1).</summary>
+    public float MusicVolume01 => musicVolume01;
 
     private void Awake()
     {
@@ -70,6 +92,11 @@ public class AudioManager : MonoBehaviour
         }
         musicSource.playOnAwake = false;
         musicSource.loop = true;
+
+        // Restore saved volumes and apply them.
+        sfxVolume01 = PlayerPrefs.GetFloat(SfxPrefKey, 1f);
+        musicVolume01 = PlayerPrefs.GetFloat(MusicPrefKey, 1f);
+        ApplyVolumes();
     }
 
     private void Start()
@@ -128,6 +155,42 @@ public class AudioManager : MonoBehaviour
         if (musicSource != null)
         {
             musicSource.Stop();
+        }
+    }
+
+    // --- Volume (wire sliders' OnValueChanged here) ----------------------
+
+    /// <summary>Sets the SFX volume from a 0-1 slider value (scaled by sfxMaxVolume) and saves it.</summary>
+    public void SetSfxVolume01(float value01)
+    {
+        sfxVolume01 = Mathf.Clamp01(value01);
+        if (sfxSource != null)
+        {
+            sfxSource.volume = sfxVolume01 * sfxMaxVolume;
+        }
+        PlayerPrefs.SetFloat(SfxPrefKey, sfxVolume01);
+    }
+
+    /// <summary>Sets the music volume from a 0-1 slider value (scaled by musicMaxVolume) and saves it.</summary>
+    public void SetMusicVolume01(float value01)
+    {
+        musicVolume01 = Mathf.Clamp01(value01);
+        if (musicSource != null)
+        {
+            musicSource.volume = musicVolume01 * musicMaxVolume;
+        }
+        PlayerPrefs.SetFloat(MusicPrefKey, musicVolume01);
+    }
+
+    private void ApplyVolumes()
+    {
+        if (sfxSource != null)
+        {
+            sfxSource.volume = sfxVolume01 * sfxMaxVolume;
+        }
+        if (musicSource != null)
+        {
+            musicSource.volume = musicVolume01 * musicMaxVolume;
         }
     }
 
