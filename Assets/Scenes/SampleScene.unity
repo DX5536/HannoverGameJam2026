@@ -152,13 +152,13 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
   segments:
   - rps: 0
-    color: {r: 0.90196085, g: 0.19999999, b: 0.2509804, a: 1}
+    color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
     weight: 1
   - rps: 1
-    color: {r: 0.1, g: 0.7, b: 0.45, a: 1}
+    color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
     weight: 1
   - rps: 2
-    color: {r: 0.3, g: 0.2, b: 0.95, a: 1}
+    color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
     weight: 1
   weightsFromStats: 1
   statsForWeights: 0
@@ -2743,11 +2743,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   slices:
-  - color: {r: 0.90196085, g: 0.19999999, b: 0.2509804, a: 1}
+  - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
     weight: 0.33
-  - color: {r: 0.1, g: 0.7, b: 0.45, a: 1}
+  - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
     weight: 0.33
-  - color: {r: 0.3, g: 0.2, b: 0.95, a: 1}
+  - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
     weight: 0.34
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
@@ -5894,13 +5894,13 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
   segments:
   - rps: 0
-    color: {r: 0.9, g: 0.2, b: 0.25, a: 1}
+    color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
     weight: 1
   - rps: 1
-    color: {r: 0.1, g: 0.7, b: 0.45, a: 1}
+    color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
     weight: 1
   - rps: 2
-    color: {r: 0.3, g: 0.2, b: 0.95, a: 1}
+    color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
     weight: 1
   weightsFromStats: 1
   statsForWeights: 1
@@ -6807,11 +6807,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   slices:
-  - color: {r: 0.9, g: 0.2, b: 0.25, a: 1}
+  - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
     weight: 0.5
-  - color: {r: 0.1, g: 0.7, b: 0.45, a: 1}
+  - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
     weight: 0.3
-  - color: {r: 0.3, g: 0.2, b: 0.95, a: 1}
+  - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
     weight: 0.2
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180

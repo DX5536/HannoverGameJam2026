@@ -132,6 +132,12 @@ public class RouletteSpin : MonoBehaviour
     [Tooltip("Fires whenever a spin lands (random or player-stopped), after the move is recorded. Handy for chaining phases.")]
     public UnityEvent onSpinLanded;
 
+    [Tooltip("Debug: fired by DebugInstantWin() so you can hook extra scene setup / skip logic.")]
+    public UnityEvent onInstantWin_DEBUG;
+
+    [Tooltip("Debug: fired by DebugInstantLose() so you can hook extra scene setup / skip logic.")]
+    public UnityEvent onInstantLose_DEBUG;
+
     private bool isSpinning;
     private bool isRandomSpinning;
     private Tween randomSpinTween;
@@ -534,6 +540,50 @@ public class RouletteSpin : MonoBehaviour
     {
         ModifyHp(currentAttacker, -1);
         onAttackCounter?.Invoke();
+    }
+
+    // --- Debug -----------------------------------------------------------
+
+    /// <summary>
+    /// DEBUG: instantly wins the fight for the player by dropping the enemy's HP to 0.
+    /// Fires onHpReachedZero (same as a normal KO) and the dedicated onInstantWin event.
+    /// Wire it to a debug button, or run it from the component's context menu (gear icon).
+    /// </summary>
+    [ContextMenu("Debug/Instant Win")]
+    public void DebugInstantWin()
+    {
+        if (enemyStats != null)
+        {
+            enemyStats.EnemyHP = 0;
+            onHpReachedZero?.Invoke();
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(RouletteSpin)}: DebugInstantWin has no EnemyStats assigned.", this);
+        }
+
+        onInstantWin_DEBUG?.Invoke();
+    }
+
+    /// <summary>
+    /// DEBUG: instantly loses the fight by dropping the player's HP to 0.
+    /// Fires onHpReachedZero (same as a normal KO) and the dedicated onInstantLose event.
+    /// Wire it to a debug button, or run it from the component's context menu (gear icon).
+    /// </summary>
+    [ContextMenu("Debug/Instant Lose")]
+    public void DebugInstantLose()
+    {
+        if (playerStats != null)
+        {
+            playerStats.PlayerHP = 0;
+            onHpReachedZero?.Invoke();
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(RouletteSpin)}: DebugInstantLose has no PlayerStats assigned.", this);
+        }
+
+        onInstantLose_DEBUG?.Invoke();
     }
 
     // --- HP helpers ------------------------------------------------------
