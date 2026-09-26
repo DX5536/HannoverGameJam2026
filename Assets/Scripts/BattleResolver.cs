@@ -36,19 +36,45 @@ public class BattleResolver : MonoBehaviour
     [Tooltip("Who is attacking THIS round. Set automatically by the phase methods.")]
     [SerializeField] private RouletteSpin.Combatant currentAttacker = RouletteSpin.Combatant.Player;
 
-    [Header("Outcome events")]
+    [Header("Outcome events (any attacker - shared SFX / HP bar)")]
+    [Tooltip("Attacker landed a hit (defender lost HP). Fires no matter who attacked.")]
     public UnityEvent onAttackHit;
+    [Tooltip("Attack was blocked (nobody lost HP). Fires no matter who attacked.")]
     public UnityEvent onAttackBlock;
+    [Tooltip("Attacker was countered (attacker lost HP). Fires no matter who attacked.")]
     public UnityEvent onAttackCounter;
 
-    [Tooltip("Fires whenever a combatant's HP reaches 0.")]
+    [Header("Outcome events (PLAYER attacking - wire player's anims)")]
+    public UnityEvent onPlayerAttackHit;
+    public UnityEvent onPlayerAttackBlock;
+    public UnityEvent onPlayerAttackCounter;
+
+    [Header("Outcome events (ENEMY attacking - wire enemy's anims)")]
+    public UnityEvent onEnemyAttackHit;
+    public UnityEvent onEnemyAttackBlock;
+    public UnityEvent onEnemyAttackCounter;
+
+    [Header("Other events")]
+    [Tooltip("Fires whenever a combatant's HP reaches 0 (either side). Good for shared 'fight over' reactions.")]
     public UnityEvent onHpReachedZero;
+
+    [Tooltip("Player won: the ENEMY's HP hit 0. Wire the player-win animation here.")]
+    public UnityEvent onPlayerWin;
+
+    [Tooltip("Enemy won: the PLAYER's HP hit 0. Wire the enemy-win animation here.")]
+    public UnityEvent onEnemyWin;
 
     [Tooltip("Debug: fired by DebugInstantWin().")]
     public UnityEvent onInstantWin_DEBUG;
 
     [Tooltip("Debug: fired by DebugInstantLose().")]
     public UnityEvent onInstantLose_DEBUG;
+
+    /// <summary>True once a combatant has been defeated this battle.</summary>
+    public bool BattleOver { get; private set; }
+
+    /// <summary>Who won (valid only when <see cref="BattleOver"/> is true).</summary>
+    public RouletteSpin.Combatant Winner { get; private set; }
 
     private void OnEnable()
     {
@@ -120,19 +146,24 @@ public class BattleResolver : MonoBehaviour
             ? playerResult
             : Invert(playerResult);
 
+        bool playerAttacking = currentAttacker == RouletteSpin.Combatant.Player;
+
         switch (attackerResult)
         {
             case AttackResult.Win:
                 ModifyHp(defender, -1); // defender takes the hit
                 onAttackHit?.Invoke();
+                (playerAttacking ? onPlayerAttackHit : onEnemyAttackHit)?.Invoke();
                 break;
             case AttackResult.Lose:
                 ModifyHp(currentAttacker, -1); // attacker gets countered
                 onAttackCounter?.Invoke();
+                (playerAttacking ? onPlayerAttackCounter : onEnemyAttackCounter)?.Invoke();
                 break;
             case AttackResult.Tie:
             default:
                 onAttackBlock?.Invoke();
+                (playerAttacking ? onPlayerAttackBlock : onEnemyAttackBlock)?.Invoke();
                 break;
         }
 
@@ -195,7 +226,7 @@ public class BattleResolver : MonoBehaviour
                 if (playerStats.PlayerHP <= 0)
                 {
                     playerStats.PlayerHP = 0;
-                    onHpReachedZero?.Invoke();
+                    HandleDefeat(RouletteSpin.Combatant.Player);
                 }
                 break;
 
@@ -209,9 +240,27 @@ public class BattleResolver : MonoBehaviour
                 if (enemyStats.EnemyHP <= 0)
                 {
                     enemyStats.EnemyHP = 0;
-                    onHpReachedZero?.Invoke();
+                    HandleDefeat(RouletteSpin.Combatant.Enemy);
                 }
                 break;
+        }
+    }
+
+    /// <summary>Records the winner and fires the shared + winner-specific events.</summary>
+    private void HandleDefeat(RouletteSpin.Combatant loser)
+    {
+        BattleOver = true;
+        Winner = Opponent(loser);
+
+        onHpReachedZero?.Invoke();
+
+        if (Winner == RouletteSpin.Combatant.Player)
+        {
+            onPlayerWin?.Invoke();
+        }
+        else
+        {
+            onEnemyWin?.Invoke();
         }
     }
 
@@ -224,7 +273,7 @@ public class BattleResolver : MonoBehaviour
         if (enemyStats != null)
         {
             enemyStats.EnemyHP = 0;
-            onHpReachedZero?.Invoke();
+            HandleDefeat(RouletteSpin.Combatant.Enemy); // player wins
         }
         else
         {
@@ -241,7 +290,7 @@ public class BattleResolver : MonoBehaviour
         if (playerStats != null)
         {
             playerStats.PlayerHP = 0;
-            onHpReachedZero?.Invoke();
+            HandleDefeat(RouletteSpin.Combatant.Player); // enemy wins
         }
         else
         {
