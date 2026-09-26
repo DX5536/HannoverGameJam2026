@@ -17,7 +17,7 @@ MonoBehaviour:
   playerDescription: 
   playerBattleSprite: []
   playerStorySprite: []
-  playerRockValue: 0
-  playerPaperValue: 0
-  playerScissorsValue: 0
+  playerRockValue: 0.33
+  playerPaperValue: 0.33
+  playerScissorsValue: 0.34
   slowdownSpeed: 0

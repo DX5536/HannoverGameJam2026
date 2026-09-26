@@ -15,7 +15,7 @@ public class PlayerStats_ScriptableObject : ScriptableObject
     [Tooltip("0 = idle, 1 = attack, 2 = hit")]
     [SerializeField] private Sprite[] playerBattleSprite;
 
-    [Tooltip("0 = neutral, 1 = angry, 2 = sad")]
+    [Tooltip("0 = idle, 1 = mad, 2 = happy")]
     [SerializeField] private Sprite[] playerStorySprite;
 
     [Header("Rock / Paper / Scissors (0 = 0%, 1 = 100%)")]
@@ -30,6 +30,13 @@ public class PlayerStats_ScriptableObject : ScriptableObject
 
     [Header("Spin")]
     [SerializeField] private float slowdownSpeed;
+
+    [Header("Runtime / Debug (set by RouletteSpin)")]
+    [Tooltip("The Rock / Paper / Scissors this player rolled on the last spin.")]
+    [SerializeField] private string currentSpinResult;
+
+    [Tooltip("How the last spin went for this player: Win / Tie / Lose.")]
+    [SerializeField] private string currentAction;
 
     // --- Public properties ---
     public string PlayerName => playerName;
@@ -68,5 +75,17 @@ public class PlayerStats_ScriptableObject : ScriptableObject
     {
         get => slowdownSpeed;
         set => slowdownSpeed = value;
+    }
+
+    public string CurrentSpinResult
+    {
+        get => currentSpinResult;
+        set => currentSpinResult = value;
+    }
+
+    public string CurrentAction
+    {
+        get => currentAction;
+        set => currentAction = value;
     }
 }

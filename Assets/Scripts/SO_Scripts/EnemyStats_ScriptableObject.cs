@@ -15,7 +15,7 @@ public class EnemyStats_ScriptableObject : ScriptableObject
     [Tooltip("0 = idle, 1 = attack, 2 = hit")]
     [SerializeField] private Sprite[] enemyBattleSprite;
 
-    [Tooltip("0 = neutral, 1 = angry, 2 = sad")]
+    [Tooltip("0 = idle, 1 = mad, 2 = happy")]
     [SerializeField] private Sprite[] enemyStorySprite;
 
     [Header("Tips")]
@@ -33,6 +33,13 @@ public class EnemyStats_ScriptableObject : ScriptableObject
 
     [Header("Spin")]
     [SerializeField] private float spinSpeed;
+
+    [Header("Runtime / Debug (set by RouletteSpin)")]
+    [Tooltip("The Rock / Paper / Scissors this enemy rolled on the last spin.")]
+    [SerializeField] private string currentSpinResult;
+
+    [Tooltip("How the last spin went for this enemy: Win / Tie / Lose.")]
+    [SerializeField] private string currentAction;
 
     // --- Public properties ---
     public string EnemyName => enemyName;
@@ -73,5 +80,17 @@ public class EnemyStats_ScriptableObject : ScriptableObject
     {
         get => spinSpeed;
         set => spinSpeed = value;
+    }
+
+    public string CurrentSpinResult
+    {
+        get => currentSpinResult;
+        set => currentSpinResult = value;
+    }
+
+    public string CurrentAction
+    {
+        get => currentAction;
+        set => currentAction = value;
     }
 }
