@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Simple one-shot sound-effect player. Call the public methods from anywhere via
 /// <see cref="Instance"/> (e.g. AudioManager.Instance.PlayAttackSFX()) or hook them to
-/// UnityEvents (button OnClick -> PlayButtonPress, RouletteSpin.onAttackHit -> PlayAttackSFX, etc.).
+/// UnityEvents (button OnClick -> PlayButtonPress, BattleResolver.onAttackHit -> PlayAttackSFX, etc.).
 ///
 /// Put this on one GameObject in the scene, assign the clips, and (optionally) an
 /// AudioSource - one is added automatically if you don't.

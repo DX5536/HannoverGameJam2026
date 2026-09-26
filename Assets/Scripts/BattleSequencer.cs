@@ -9,7 +9,7 @@ using UnityEngine.Events;
 /// and <see cref="onEnemyTurn"/> in the Inspector (like a DOTween Timeline callback).
 ///
 /// A turn ends when something calls <see cref="AdvanceTurn"/> - e.g. a DOTween Timeline
-/// end-callback, or RouletteSpin's resolve event. That schedules the next turn after an
+/// end-callback, or BattleResolver's outcome event. That schedules the next turn after an
 /// optional delay, so async / player-input turns work without any polling.
 ///
 /// Turn order comes from <see cref="mode"/>:
@@ -103,7 +103,7 @@ public class BattleSequencer : MonoBehaviour
 
     /// <summary>
     /// Call when the current turn's actions are done (from a DOTween Timeline callback,
-    /// RouletteSpin's resolve event, etc.). Schedules the next turn after the default delay.
+    /// BattleResolver's outcome event, etc.). Schedules the next turn after the default delay.
     /// </summary>
     public void AdvanceTurn()
     {
@@ -130,7 +130,7 @@ public class BattleSequencer : MonoBehaviour
         }
     }
 
-    /// <summary>Ends the battle (e.g. wire RouletteSpin.onHpReachedZero here) and stops any pending turn.</summary>
+    /// <summary>Ends the battle (e.g. wire BattleResolver.onHpReachedZero here) and stops any pending turn.</summary>
     public void StopBattle()
     {
         if (!battleRunning)
