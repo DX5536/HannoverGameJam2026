@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: _PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats_ScriptableObject
   playerName: Me
-  playerHP: 5
+  maxHP: 5
+  currentHP: 3
   playerDescription: It's me!
   playerBattleSprite:
   - {fileID: 21300000, guid: 015fceaeb49b9b0499c3f305ed52d2b5, type: 3}
@@ -24,4 +25,4 @@ MonoBehaviour:
   playerScissorsValue: 0.34
   slowdownSpeed: 0
   currentSpinResult: Scissors
-  currentAction: 
+  currentAction: Lose

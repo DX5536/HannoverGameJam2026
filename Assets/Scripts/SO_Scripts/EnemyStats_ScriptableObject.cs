@@ -6,7 +6,11 @@ public class EnemyStats_ScriptableObject : ScriptableObject
     [Header("General")]
     [SerializeField] private string enemyName;
 
-    [SerializeField] private int enemyHP;
+    [Tooltip("Maximum (full) HP.")]
+    [SerializeField] private int maxHP = 5;
+
+    [Tooltip("Current HP. Automatically reset to Max HP on load and via ResetHP().")]
+    [SerializeField] private int currentHP = 5;
 
     [TextArea(3, 10)]
     [SerializeField] private string enemyDescription;
@@ -41,13 +45,27 @@ public class EnemyStats_ScriptableObject : ScriptableObject
     [Tooltip("How the last spin went for this enemy: Win / Tie / Lose.")]
     [SerializeField] private string currentAction;
 
+    private void OnEnable()
+    {
+        // Start each play session / load at full health so battles never inherit a stale value.
+        ResetHP();
+    }
+
+    /// <summary>Restores current HP to full (max). Call at the start of a battle.</summary>
+    public void ResetHP()
+    {
+        currentHP = maxHP;
+    }
+
     // --- Public properties ---
     public string EnemyName => enemyName;
 
-    public int EnemyHP
+    public int MaxHP => maxHP;
+
+    public int CurrentHP
     {
-        get => enemyHP;
-        set => enemyHP = value;
+        get => currentHP;
+        set => currentHP = value;
     }
 
     public string EnemyDescription => enemyDescription;

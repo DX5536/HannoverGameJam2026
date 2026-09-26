@@ -222,10 +222,10 @@ public class BattleResolver : MonoBehaviour
                     Debug.LogWarning($"{nameof(BattleResolver)}: No PlayerStats assigned.", this);
                     return;
                 }
-                playerStats.PlayerHP += delta;
-                if (playerStats.PlayerHP <= 0)
+                playerStats.CurrentHP += delta;
+                if (playerStats.CurrentHP <= 0)
                 {
-                    playerStats.PlayerHP = 0;
+                    playerStats.CurrentHP = 0;
                     HandleDefeat(RouletteSpin.Combatant.Player);
                 }
                 break;
@@ -236,10 +236,10 @@ public class BattleResolver : MonoBehaviour
                     Debug.LogWarning($"{nameof(BattleResolver)}: No EnemyStats assigned.", this);
                     return;
                 }
-                enemyStats.EnemyHP += delta;
-                if (enemyStats.EnemyHP <= 0)
+                enemyStats.CurrentHP += delta;
+                if (enemyStats.CurrentHP <= 0)
                 {
-                    enemyStats.EnemyHP = 0;
+                    enemyStats.CurrentHP = 0;
                     HandleDefeat(RouletteSpin.Combatant.Enemy);
                 }
                 break;
@@ -272,7 +272,7 @@ public class BattleResolver : MonoBehaviour
     {
         if (enemyStats != null)
         {
-            enemyStats.EnemyHP = 0;
+            enemyStats.CurrentHP = 0;
             HandleDefeat(RouletteSpin.Combatant.Enemy); // player wins
         }
         else
@@ -289,7 +289,7 @@ public class BattleResolver : MonoBehaviour
     {
         if (playerStats != null)
         {
-            playerStats.PlayerHP = 0;
+            playerStats.CurrentHP = 0;
             HandleDefeat(RouletteSpin.Combatant.Player); // enemy wins
         }
         else
