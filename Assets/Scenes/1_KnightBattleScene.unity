@@ -119,6 +119,143 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111494243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111494244}
+  - component: {fileID: 111494246}
+  - component: {fileID: 111494245}
+  m_Layer: 0
+  m_Name: HP_TMP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &111494244
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111494243}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1242665990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 80, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &111494245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111494243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 5/5
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 65.1
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &111494246
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111494243}
+  m_CullTransparentMesh: 1
 --- !u!1 &131049213
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,8 +845,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1755036546}
   - {fileID: 628569352}
+  - {fileID: 1755036546}
   - {fileID: 789119391}
   - {fileID: 1449472194}
   - {fileID: 693291337}
@@ -770,10 +907,10 @@ Canvas:
   m_GameObject: {fileID: 515849534}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1056,11 +1193,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1715663196}
+  - {fileID: 1242665990}
   m_Father: {fileID: 515849535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 300}
+  m_AnchoredPosition: {x: -600, y: 300}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628569353
@@ -1310,6 +1448,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693291336}
   m_CullTransparentMesh: 1
+--- !u!1 &708332126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708332127}
+  - component: {fileID: 708332129}
+  - component: {fileID: 708332128}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &708332127
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708332126}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 940646045}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &708332128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708332126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0370172b621474146b06ce655f2e8791, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &708332129
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708332126}
+  m_CullTransparentMesh: 1
 --- !u!1 &789119390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1585,117 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &940646044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940646045}
+  m_Layer: 0
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &940646045
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940646044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 708332127}
+  m_Father: {fileID: 1242665990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &985725635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985725636}
+  - component: {fileID: 985725638}
+  - component: {fileID: 985725637}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985725636
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985725635}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1566550304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &985725637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985725635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0370172b621474146b06ce655f2e8791, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &985725638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985725635}
+  m_CullTransparentMesh: 1
 --- !u!1 &1071753877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1849,115 @@ Transform:
   - {fileID: 1604348019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1212882495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212882496}
+  - component: {fileID: 1212882497}
+  - component: {fileID: 1212882498}
+  m_Layer: 0
+  m_Name: EnemyHPBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1212882496
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212882495}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2130885066}
+  - {fileID: 1566550304}
+  - {fileID: 1372374609}
+  m_Father: {fileID: 1755036546}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -770}
+  m_SizeDelta: {x: 500, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1212882497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212882495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 985725636}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1212882498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212882495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e27381854662664fa7f46cb2c6392fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPBar
+  slider: {fileID: 1212882497}
+  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  playerStats: {fileID: 0}
+  tweenDuration: 0.2
+  tweenEase: 6
+  hpText: {fileID: 1372374610}
 --- !u!1 &1225701990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +2125,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1242665989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242665990}
+  - component: {fileID: 1242665991}
+  - component: {fileID: 1242665992}
+  m_Layer: 0
+  m_Name: PlayerHPBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1242665990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242665989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1723552494}
+  - {fileID: 940646045}
+  - {fileID: 111494244}
+  m_Father: {fileID: 628569352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -770}
+  m_SizeDelta: {x: 500, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1242665991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242665989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 708332127}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 5
+  m_WholeNumbers: 0
+  m_Value: 5
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1242665992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242665989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e27381854662664fa7f46cb2c6392fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPBar
+  slider: {fileID: 1242665991}
+  enemyStats: {fileID: 0}
+  playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
+  tweenDuration: 0.2
+  tweenEase: 6
+  hpText: {fileID: 111494245}
 --- !u!1 &1332483351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +2259,7 @@ Transform:
   m_GameObject: {fileID: 1332483351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -1, z: 0}
+  m_LocalPosition: {x: -6, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1734,6 +2276,143 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6590146974c9faf4e99e7a48bff113cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RouletteSpin
+--- !u!1 &1372374608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372374609}
+  - component: {fileID: 1372374611}
+  - component: {fileID: 1372374610}
+  m_Layer: 0
+  m_Name: HP_TMP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1372374609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372374608}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1212882496}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 80, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1372374610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372374608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 5/5
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 65.1
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1372374611
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372374608}
+  m_CullTransparentMesh: 1
 --- !u!1 &1390961517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +2438,7 @@ Transform:
   m_GameObject: {fileID: 1390961517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: -1, z: 0}
+  m_LocalPosition: {x: 6, y: -1.2, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1898,6 +2577,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449472193}
   m_CullTransparentMesh: 1
+--- !u!1 &1566550303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566550304}
+  m_Layer: 0
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1566550304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566550303}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 985725636}
+  m_Father: {fileID: 1212882496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1604348017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,6 +3065,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715663195}
   m_CullTransparentMesh: 1
+--- !u!1 &1723552493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723552494}
+  - component: {fileID: 1723552496}
+  - component: {fileID: 1723552495}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1723552494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723552493}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1242665990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1723552495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723552493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 16d1e38864b535e4d8eebdc9fa12500f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1723552496
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723552493}
+  m_CullTransparentMesh: 1
 --- !u!1 &1733428349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,11 +3202,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1942290546}
+  - {fileID: 1212882496}
   m_Father: {fileID: 515849535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: 300}
+  m_AnchoredPosition: {x: 600, y: 300}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1755036547
@@ -2930,6 +3721,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992707054}
   m_CullTransparentMesh: 1
+--- !u!1 &2130885065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130885066}
+  - component: {fileID: 2130885068}
+  - component: {fileID: 2130885067}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2130885066
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130885065}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1212882496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2130885067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130885065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 16d1e38864b535e4d8eebdc9fa12500f, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2130885068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130885065}
+  m_CullTransparentMesh: 1
 --- !u!114 &2137976463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
@@ -2964,6 +3830,9 @@ GameObject:
   - component: {fileID: 8759354527203680746}
   - component: {fileID: 6047463602510750647}
   - component: {fileID: 8835943165490446307}
+  - component: {fileID: 8835943165490446308}
+  - component: {fileID: 8835943165490446309}
+  - component: {fileID: 8835943165490446310}
   m_Layer: 0
   m_Name: EnemyAttackCountered_Anim
   m_TagString: Untagged
@@ -3215,7 +4084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!4 &348755426451935384 stripped
 Transform:
@@ -3249,7 +4118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &462192417625992207
 MonoBehaviour:
@@ -3296,7 +4165,7 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 9047665638586845807}
   tweenTargetIsTargetGO: 1
-  delay: 0.9
+  delay: 0.8
   duration: 0.5
   easeType: 19
   easeCurve:
@@ -3386,7 +4255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &615655176178710310
 MonoBehaviour:
@@ -3557,7 +4426,7 @@ MonoBehaviour:
   targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
   delay: 0.5
-  duration: 0.3
+  duration: 0.15
   easeType: 19
   easeCurve:
     serializedVersion: 2
@@ -3631,11 +4500,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: attackBlockedSFX
+  id: ATTACK_BLOCK
   delay: 0.5
   onCallback:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_ATTACK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1071753878}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAttackSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &772070268273826662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3768,11 +4661,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: enemyAttackSFX
+  id: enemyATTACK
   delay: 0.5
   onCallback:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071753878}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAttackSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332137149402194072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3819,7 +4724,7 @@ MonoBehaviour:
   targetGO: {fileID: 9047665638586845807}
   tweenTargetIsTargetGO: 1
   delay: 0.5
-  duration: 0.3
+  duration: 0.15
   easeType: 19
   easeCurve:
     serializedVersion: 2
@@ -3926,8 +4831,8 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 9047665638586845807}
   tweenTargetIsTargetGO: 1
-  delay: 0.66
-  duration: 0.3
+  delay: 0.65
+  duration: 0.15
   easeType: 19
   easeCurve:
     serializedVersion: 2
@@ -3972,7 +4877,7 @@ MonoBehaviour:
   endValueFloat: 0
   endValueV3: {x: 1, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
+  endValueColor: {r: 1, g: 0, b: 0, a: 1}
   endValueString: 
   endValueRect:
     serializedVersion: 2
@@ -4002,12 +4907,14 @@ GameObject:
   - component: {fileID: 437133019863222186}
   - component: {fileID: 1695133161427198686}
   - component: {fileID: 2348148360492683557}
+  - component: {fileID: 9031528306390465706}
   - component: {fileID: 3269930950027592203}
   - component: {fileID: 9031528306390465702}
   - component: {fileID: 5064340574681529863}
   - component: {fileID: 4818419359871150053}
   - component: {fileID: 9031528306390465704}
   - component: {fileID: 9031528306390465703}
+  - component: {fileID: 9031528306390465705}
   m_Layer: 0
   m_Name: PlayerAttackHit_Anim
   m_TagString: Untagged
@@ -4049,19 +4956,7 @@ MonoBehaviour:
   hasOnRewind: 0
   onStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 533308755}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -4073,19 +4968,7 @@ MonoBehaviour:
       m_Calls: []
   onComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 533308755}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -4203,7 +5086,7 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
-  delay: 0.8
+  delay: 0.65
   duration: 0.3
   easeType: 7
   easeCurve:
@@ -4362,7 +5245,7 @@ MonoBehaviour:
   loops: 1
   id: 
   isRelative: 0
-  isFrom: 1
+  isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
   autoGenerate: 0
@@ -4374,7 +5257,7 @@ MonoBehaviour:
   forcedTargetType: 0
   autoPlay: 1
   useTargetAsV3: 0
-  endValueFloat: 0
+  endValueFloat: 0.2
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
@@ -4421,7 +5304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &2348148360492683557
 MonoBehaviour:
@@ -4468,8 +5351,8 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
-  delay: 0.8
-  duration: 0.3
+  delay: 0.65
+  duration: 0.15
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -4514,7 +5397,7 @@ MonoBehaviour:
   endValueFloat: 0
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
+  endValueColor: {r: 1, g: 0, b: 0, a: 1}
   endValueString: 
   endValueRect:
     serializedVersion: 2
@@ -4620,7 +5503,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: -3, y: 0, z: 0}
+  endValueV3: {x: -6, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -4841,7 +5724,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: -3, y: 0, z: 0}
+  endValueV3: {x: -6, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5290,7 +6173,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: 1, y: 0, z: 0}
+  endValueV3: {x: 2, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5429,7 +6312,7 @@ MonoBehaviour:
   loops: 1
   id: 
   isRelative: 0
-  isFrom: 1
+  isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
   autoGenerate: 0
@@ -5441,7 +6324,7 @@ MonoBehaviour:
   forcedTargetType: 0
   autoPlay: 1
   useTargetAsV3: 0
-  endValueFloat: 0
+  endValueFloat: 0.2
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
@@ -5549,7 +6432,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   targetIsSelf: 0
-  targetGO: {fileID: 9047665638586845807}
+  targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
   delay: 1.1
   duration: 0.4
@@ -5588,14 +6471,14 @@ MonoBehaviour:
   autoGenerate: 0
   isActive: 1
   isValid: 1
-  target: {fileID: 4151704438011243816}
+  target: {fileID: 505862322}
   animationType: 1
   targetType: 11
   forcedTargetType: 0
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: 3, y: 0, z: 0}
+  endValueV3: {x: 6, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5652,6 +6535,9 @@ GameObject:
   - component: {fileID: 7124269126924604265}
   - component: {fileID: 6847333868470608115}
   - component: {fileID: 761485113440184920}
+  - component: {fileID: 8017675247650085722}
+  - component: {fileID: 8017675247650085721}
+  - component: {fileID: 8017675247650085720}
   m_Layer: 0
   m_Name: EnemyAttackBlock_Anim
   m_TagString: Untagged
@@ -5684,11 +6570,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 561475843937817252, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 561475843937817252, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 561475843937817252, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5720,6 +6606,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561475843937817252, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356680276495218121, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006260691640040758, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3160334030349690065, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
@@ -5851,7 +6745,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: 3, y: 0, z: 0}
+  endValueV3: {x: 6, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5880,11 +6774,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 169060614670195594, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 169060614670195594, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 169060614670195594, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5919,9 +6813,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 516444541403937900, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 516444541403937900, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 1678899375}
+    - target: {fileID: 1880064096960159907, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: arrow
       value: 
@@ -5951,6 +6853,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+--- !u!114 &4686811153949659636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 924623189195602316, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+  m_PrefabInstance: {fileID: 4686811153949659635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505862320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be26e381a9415a44085c8de1ff84611a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Battle_SpriteSwap
 --- !u!114 &4738316930661663235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6177,7 +7090,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: 1, y: 0, z: 0}
+  endValueV3: {x: 2.5, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -6285,7 +7198,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: 1, y: 0, z: 0}
+  endValueV3: {x: 2, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -6428,7 +7341,31 @@ MonoBehaviour:
   delay: 0.5
   onCallback:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071753878}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBlockSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4492079488719585165}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_ATTACK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5269511931113004409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6474,8 +7411,8 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 9047665638586845807}
   tweenTargetIsTargetGO: 1
-  delay: 0.8
-  duration: 0.3
+  delay: 0.65
+  duration: 0.15
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -6520,7 +7457,7 @@ MonoBehaviour:
   endValueFloat: 0
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
+  endValueColor: {r: 1, g: 0, b: 0, a: 1}
   endValueString: 
   endValueRect:
     serializedVersion: 2
@@ -6554,7 +7491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &5336173898924769521
 MonoBehaviour:
@@ -6645,7 +7582,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: -1, y: 0, z: 0}
+  endValueV3: {x: -2, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -6676,7 +7613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!1 &5519006725727063562
 GameObject:
@@ -6739,7 +7676,7 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
-  delay: 0.9
+  delay: 0.8
   duration: 0.5
   easeType: 19
   easeCurve:
@@ -6828,11 +7765,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: DOTweenPro.Scripts::DG.Tweening.DOTweenAnimation
   updateType: 0
   isSpeedBased: 0
-  hasOnStart: 1
+  hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 1
+  hasOnComplete: 0
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:
@@ -6965,6 +7902,8 @@ GameObject:
   - component: {fileID: 2951035515840595688}
   - component: {fileID: 5246858455919936485}
   - component: {fileID: 6288790260575878642}
+  - component: {fileID: 6288790260575878643}
+  - component: {fileID: 6288790260575878644}
   m_Layer: 0
   m_Name: PlayerAttackBlock_Anim
   m_TagString: Untagged
@@ -6984,11 +7923,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: PlayerIDLE
+  id: playerIDLE
   delay: 0
   onCallback:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4492079488719585165}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1071753878}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAttackSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6288790260575878643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288790260575878641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: playerIDLE
+  delay: 1.1
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4492079488719585165}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6288790260575878644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288790260575878641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEnd
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6420517508417436817
 GameObject:
   m_ObjectHideFlags: 0
@@ -7007,6 +8028,9 @@ GameObject:
   - component: {fileID: 1363352702813095116}
   - component: {fileID: 462192417625992207}
   - component: {fileID: 8921149612429332715}
+  - component: {fileID: 9116664422628812479}
+  - component: {fileID: 9116664422628812478}
+  - component: {fileID: 9116664422628812477}
   m_Layer: 0
   m_Name: PlayerAttackCountered_Anim
   m_TagString: Untagged
@@ -7285,7 +8309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &7703458539824622770
 MonoBehaviour:
@@ -7440,7 +8464,7 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 9047665638586845807}
   tweenTargetIsTargetGO: 1
-  delay: 0.8
+  delay: 0.65
   duration: 0.3
   easeType: 7
   easeCurve:
@@ -7623,7 +8647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27112ff1df63484799cee4ba6f667229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimelinePlayer
-  playOnEnable: 1
+  playOnEnable: 0
   loops: 1
 --- !u!114 &8017675247650085719
 MonoBehaviour:
@@ -7637,6 +8661,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8cb1412b7044e9a53743bbdcadbe4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimeline
+--- !u!114 &8017675247650085720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472822930395780326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEND
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8017675247650085721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472822930395780326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 1.1
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8017675247650085722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472822930395780326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 0
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8621330383681591770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7726,7 +8837,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: -1, y: 0, z: 0}
+  endValueV3: {x: -2, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -7790,8 +8901,8 @@ MonoBehaviour:
   targetIsSelf: 0
   targetGO: {fileID: 505862320}
   tweenTargetIsTargetGO: 1
-  delay: 0.66
-  duration: 0.3
+  delay: 0.65
+  duration: 0.15
   easeType: 19
   easeCurve:
     serializedVersion: 2
@@ -7836,7 +8947,7 @@ MonoBehaviour:
   endValueFloat: 0
   endValueV3: {x: 1, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
-  endValueColor: {r: 1, g: 0, b: 0, a: 0.39215687}
+  endValueColor: {r: 1, g: 0, b: 0, a: 1}
   endValueString: 
   endValueRect:
     serializedVersion: 2
@@ -7866,10 +8977,14 @@ GameObject:
   - component: {fileID: 8000336520409142306}
   - component: {fileID: 7903732854948211031}
   - component: {fileID: 5269511931113004409}
+  - component: {fileID: 8774665584088730070}
   - component: {fileID: 5336173898924769521}
   - component: {fileID: 4283354937031618313}
   - component: {fileID: 3039858835697588456}
   - component: {fileID: 1230344370080829366}
+  - component: {fileID: 8774665584088730073}
+  - component: {fileID: 8774665584088730072}
+  - component: {fileID: 8774665584088730071}
   m_Layer: 0
   m_Name: EnemyAttackHit_Anim
   m_TagString: Untagged
@@ -7877,6 +8992,201 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8774665584088730070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774665584088730069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DOTweenPro.Scripts::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 9047665638586845807}
+  tweenTargetIsTargetGO: 1
+  delay: 0.8
+  duration: 0.15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 1
+  autoGenerate: 0
+  isActive: 1
+  isValid: 1
+  target: {fileID: 1758235365415760517}
+  animationType: 6
+  targetType: 7
+  forcedTargetType: 0
+  autoPlay: 1
+  useTargetAsV3: 0
+  endValueFloat: 0
+  endValueV3: {x: 0, y: 0, z: 0}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalBool1: 0
+  optionalFloat0: 0
+  optionalInt0: 0
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &8774665584088730071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774665584088730069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEND
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8774665584088730072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774665584088730069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 1.1
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8774665584088730073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774665584088730069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 0
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8835943165490446307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7889,11 +9199,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: playerAttackSFX
-  delay: 0.6
+  id: playerATTACK
+  delay: 0.5
   onCallback:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8835943165490446308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26235356451444927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: playerIDLE
+  delay: 0.96
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4492079488719585165}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8835943165490446309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26235356451444927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 0
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8835943165490446310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26235356451444927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEnd
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8921149612429332715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7906,18 +9303,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: enemyAttackSFX
-  delay: 0.6
+  id: enemyATTACK
+  delay: 0.5
   onCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_ATTACK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1071753878}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAttackSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8027,7 +9436,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 1
   endValueFloat: 0
-  endValueV3: {x: -3, y: 0, z: 0}
+  endValueV3: {x: -6, y: -1.5, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -8104,6 +9513,143 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9031528306390465705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494618661783810924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEND
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9031528306390465706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494618661783810924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DOTweenPro.Scripts::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 505862320}
+  tweenTargetIsTargetGO: 1
+  delay: 0.8
+  duration: 0.15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 1
+  autoGenerate: 0
+  isActive: 1
+  isValid: 1
+  target: {fileID: 505862321}
+  animationType: 6
+  targetType: 7
+  forcedTargetType: 0
+  autoPlay: 1
+  useTargetAsV3: 0
+  endValueFloat: 0
+  endValueV3: {x: 0, y: 0, z: 0}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalBool1: 0
+  optionalFloat0: 0
+  optionalInt0: 0
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
 --- !u!1 &9047665638586845807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4888887779729667555, guid: aab79f739686a9845bfaf8a91e13e351, type: 3}
@@ -8121,6 +9667,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8cb1412b7044e9a53743bbdcadbe4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenTimeline
+--- !u!114 &9116664422628812477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420517508417436817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: playerIDLE
+  delay: 0
+  onCallback:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9116664422628812478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420517508417436817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: turnEnd
+  delay: 2
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237182224}
+        m_TargetAssemblyTypeName: BattleSequencer, Assembly-CSharp
+        m_MethodName: AdvanceTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9116664422628812479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420517508417436817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
+  id: enemyIDLE
+  delay: 0.96
+  onCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4686811153949659636}
+        m_TargetAssemblyTypeName: Battle_SpriteSwap, Assembly-CSharp
+        m_MethodName: SpriteSwap_IDLE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

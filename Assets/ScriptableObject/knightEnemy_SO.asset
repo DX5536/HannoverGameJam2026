@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: knightEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
   enemyName: Oreon
-  enemyHP: 5
+  enemyHP: 6
   enemyDescription: A very tanky knight
   enemyBattleSprite:
   - {fileID: 21300000, guid: 318484c1ef0396f42962baccf89614bf, type: 3}

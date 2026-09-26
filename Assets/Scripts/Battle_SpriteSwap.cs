@@ -51,21 +51,27 @@ public class Battle_SpriteSwap : MonoBehaviour
 
     public void SpriteSwap_IDLE()
     {
+        spriteRenderer.sortingOrder = 0;
+
         Apply(BattleState.IDLE);
         onIdle?.Invoke();
     }
 
     public void SpriteSwap_ATTACK()
     {
+        spriteRenderer.sortingOrder = 5;
+
         Apply(BattleState.ATTACK);
         onAttack?.Invoke();
     }
 
-    public void SpriteSwap_HIT()
+    //There is no hit anymore
+
+    /*public void SpriteSwap_HIT()
     {
         Apply(BattleState.HIT);
         onHit?.Invoke();
-    }
+    }*/
 
     // --- Internal --------------------------------------------------------
 
