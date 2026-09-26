@@ -25,6 +25,10 @@ public class BattleSequencer : MonoBehaviour
     /// <summary>What FixedList mode does once the custom order has been played through.</summary>
     public enum AfterList { Repeat, PingPong, Random, EndBattle }
 
+    [Header("Battle end")]
+    [Tooltip("Optional. If assigned, AdvanceTurn stops the battle instead of starting a new round once someone has won.")]
+    [SerializeField] private BattleResolver battleResolver;
+
     [Header("Sequence source (optional)")]
     [Tooltip("Assign a BossSequence asset to drive the turn order + timing from data. When set, it overrides the inline fields below.")]
     [SerializeField] private BossSequence_ScriptableObject sequence;
@@ -118,6 +122,14 @@ public class BattleSequencer : MonoBehaviour
             return;
         }
 
+        // If someone has already won, don't start another round - end the battle instead.
+        // (The win/lose animations were already fired by BattleResolver on the killing blow.)
+        if (IsBattleWon())
+        {
+            StopBattle();
+            return;
+        }
+
         StopPending();
 
         if (delay <= 0f)
@@ -128,6 +140,12 @@ public class BattleSequencer : MonoBehaviour
         {
             pendingTurnTween = DOVirtual.DelayedCall(delay, FireNextTurn);
         }
+    }
+
+    /// <summary>True once the resolver reports a winner.</summary>
+    private bool IsBattleWon()
+    {
+        return battleResolver != null && battleResolver.BattleOver;
     }
 
     /// <summary>Ends the battle (e.g. wire BattleResolver.onHpReachedZero here) and stops any pending turn.</summary>
@@ -149,6 +167,13 @@ public class BattleSequencer : MonoBehaviour
     {
         if (!battleRunning)
         {
+            return;
+        }
+
+        // A win may have landed after this turn was scheduled - end instead of advancing.
+        if (IsBattleWon())
+        {
+            StopBattle();
             return;
         }
 
