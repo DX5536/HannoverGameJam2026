@@ -16,5 +16,5 @@ MonoBehaviour:
   firstAttacker: 0
   customOrder: 0000000001000000
   afterList: 0
-  randomEnemyChance: 0.5
+  randomEnemyChance: 0.6
   delayBetweenTurns: 0.5

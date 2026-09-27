@@ -749,7 +749,6 @@ RectTransform:
   - {fileID: 1955287497}
   - {fileID: 1682324001}
   - {fileID: 1586848968}
-  - {fileID: 1756283261}
   m_Father: {fileID: 1225701991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1246,11 +1245,11 @@ MonoBehaviour:
       m_Calls: []
   slices:
   - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
-    weight: 0.33
+    weight: 0.5
   - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
-    weight: 0.33
+    weight: 0.33168316
   - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
-    weight: 0.34
+    weight: 0.16831683
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
   highlightPopDistance: 16
@@ -3026,6 +3025,7 @@ RectTransform:
   - {fileID: 1642702101}
   - {fileID: 1882064221}
   - {fileID: 1031944048}
+  - {fileID: 1756283261}
   - {fileID: 464416867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6544,12 +6544,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756283260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 464416867}
+  m_Father: {fileID: 1225701991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
