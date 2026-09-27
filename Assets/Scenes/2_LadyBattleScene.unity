@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleRestarter
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
   battleResolver: {fileID: 1100502880}
   battleSequencer: {fileID: 1237182224}
   onRestart:
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5bef8fd21f2d6ba48acbbbb68247f8d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5bc636a5a6a519468e550d912683395, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   playerRoulette: {fileID: 1552846253746854749}
   enemyRoulette: {fileID: 1356424065}
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
   currentAttacker: 0
   winEventDelay: 2
   onAttackHit:
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSequencer
   battleResolver: {fileID: 1100502880}
-  sequence: {fileID: 11400000, guid: c422e95c6c284854ca2bb9b0d1cdfd55, type: 2}
+  sequence: {fileID: 11400000, guid: 7981146161ec3b441b6c52e15e70686e, type: 2}
   mode: 0
   firstAttacker: 0
   customOrder: 0000000001000000
@@ -3394,7 +3394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9675ba4fa3db75a4492bbfe2e0ae3141, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5006c70ff3e3ef54485ecead86341a8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3731,8 +3731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: switchScene
-  delay: 1.5
+  id: sceneSwitcher
+  delay: 2
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -3743,7 +3743,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6509,11 +6509,11 @@ MonoBehaviour:
       m_Calls: []
   slices:
   - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
-    weight: 0.5
+    weight: 0.1
   - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
     weight: 0.3
   - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
-    weight: 0.2
+    weight: 0.6
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
   highlightPopDistance: 16
@@ -11505,6 +11505,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678899375}
     - target: {fileID: 924623189195602316, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: enemyStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
+    - target: {fileID: 924623189195602316, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 505862321}
@@ -11524,6 +11528,10 @@ PrefabInstance:
       propertyPath: combatant
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: enemyStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
     - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: onAttackHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

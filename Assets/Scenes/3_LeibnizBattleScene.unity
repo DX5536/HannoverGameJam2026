@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleRestarter
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
   battleResolver: {fileID: 1100502880}
   battleSequencer: {fileID: 1237182224}
   onRestart:
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5bef8fd21f2d6ba48acbbbb68247f8d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2e4ad8419065164281e996b1fb92d5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   playerRoulette: {fileID: 1552846253746854749}
   enemyRoulette: {fileID: 1356424065}
   playerStats: {fileID: 11400000, guid: 8555184e7a829994daad0d59223aaef4, type: 2}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
   currentAttacker: 0
   winEventDelay: 2
   onAttackHit:
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSequencer
   battleResolver: {fileID: 1100502880}
-  sequence: {fileID: 11400000, guid: c422e95c6c284854ca2bb9b0d1cdfd55, type: 2}
+  sequence: {fileID: 11400000, guid: 4ba542293f2e7be429342a88016894ef, type: 2}
   mode: 0
   firstAttacker: 0
   customOrder: 0000000001000000
@@ -3731,8 +3731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bee1517e4a659de153d8f058c0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Dott::Dott.DOTweenCallback
-  id: switchScene
-  delay: 1.5
+  id: sceneSwitcher
+  delay: 2
   onCallback:
     m_PersistentCalls:
       m_Calls:
@@ -3743,7 +3743,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11504,6 +11504,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 1678899375}
+    - target: {fileID: 924623189195602316, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: enemyStats
+      value: 
+      objectReference: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
     - target: {fileID: 924623189195602316, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: spriteRenderer
       value: 
