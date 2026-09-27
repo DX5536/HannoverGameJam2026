@@ -163,6 +163,7 @@ public class RouletteSpin : MonoBehaviour
             return; // a random spin is in progress and can't be interrupted
         }
         ClearHighlight();
+        SyncWheel(); // redraw arcs from CURRENT weights so the visual matches the landed slice
         isSpinning = true;
     }
 
@@ -189,6 +190,7 @@ public class RouletteSpin : MonoBehaviour
         }
         isSpinning = false; // cancel any manual spin
         ClearHighlight();
+        SyncWheel(); // redraw arcs from CURRENT weights so the visual matches the landed slice
 
         if (arrow == null)
         {
