@@ -113,28 +113,39 @@ public class YarnCommand_TweenAnimationStart : MonoBehaviour
 
     private static void Trigger(DOTweenTimeline timeline, bool reverse)
     {
-        // Always start from a fresh sequence. The timeline auto-kills its sequence after a
-        // normal play, but a reverse leaves one alive - killing here keeps both paths clean.
-        if (timeline.Sequence != null && timeline.Sequence.IsActive())
+        // Reuse a persisted sequence so it can be driven forward AND backward. The timeline
+        // normally auto-kills its sequence after playing (leaving nothing to reverse), so the
+        // first time we build it we turn auto-kill OFF and keep it alive.
+        Sequence seq = timeline.Sequence;
+        if (seq == null || !seq.IsActive())
         {
-            timeline.Sequence.Kill();
+            if (reverse)
+            {
+                // Nothing to rewind: the forward play was auto-killed (e.g. it was started with
+                // DOTweenTimeline.DOPlay instead of PlayTimeline). A freshly built sequence would
+                // capture the CURRENT (already animated) pose as its start, so reversing it does
+                // nothing. Play it forward with PlayTimeline so the sequence is kept alive.
+                Debug.LogWarning($"{nameof(YarnCommand_TweenAnimationStart)}: '{timeline.name}' has no live sequence to reverse. Play it forward with PlayTimeline (not DOTweenTimeline.DOPlay) so it can be rewound.", timeline);
+                return;
+            }
+
+            seq = timeline.Play(); // builds the sequence (and starts it forward)
+            if (seq == null)
+            {
+                return;
+            }
+            seq.SetAutoKill(false); // keep it alive so PlayForward/PlayBackwards work later
         }
 
-        if (!reverse)
+        // Drive the direction. PlayForward from the start opens it; PlayBackwards from the
+        // end closes it. (Callbacks fire on the forward pass only - DOTween is one-directional.)
+        if (reverse)
         {
-            timeline.DOPlay();
-            return;
+            seq.PlayBackwards();
         }
-
-        // Build + play the sequence, then reverse it end -> start.
-        Sequence seq = timeline.Play();
-        if (seq == null)
+        else
         {
-            return;
+            seq.PlayForward();
         }
-
-        seq.SetAutoKill(false);  // keep it alive through Complete + the backward play
-        seq.Complete(false);     // snap to the end (no callbacks) - reliable even on a fresh tween
-        seq.PlayBackwards();     // play from end back to start
     }
 }

@@ -119,6 +119,16 @@ public class BattleResolver : MonoBehaviour
         if (enemyRoulette != null) enemyRoulette.ResetMove();
     }
 
+    /// <summary>
+    /// Clears the game-over state so a new battle can run (call before restarting the
+    /// sequencer). Does NOT reset HP - do that on the stats assets separately.
+    /// </summary>
+    public void ResetBattle()
+    {
+        BattleOver = false;
+        ResetRound();
+    }
+
     // --- Resolution ------------------------------------------------------
 
     private void OnWheelLanded(RouletteSpin _)
