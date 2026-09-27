@@ -47,6 +47,10 @@ public class PlayerStats_ScriptableObject : ScriptableObject
     {
         // Start each play session / load at full health so battles never inherit a stale value.
         ResetHP();
+
+        playerRockValue = 0.33f;
+        playerPaperValue = 0.33f;
+        playerScissorsValue = 0.34f;
     }
 
     /// <summary>Restores current HP to full (max). Call at the start of a battle.</summary>

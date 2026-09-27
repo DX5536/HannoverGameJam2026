@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: leibnizEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
   enemyName: Leibniz
-  enemyHP: 4
+  maxHP: 5
+  currentHP: 5
   enemyDescription: The ultimate biscuit warrior!
   enemyBattleSprite:
   - {fileID: 21300000, guid: 9442e1e6ea58aee42af7507d2da7a592, type: 3}
@@ -26,6 +27,6 @@ MonoBehaviour:
   enemyRockValue: 0.33
   enemyPaperValue: 0.34
   enemyScissorsValue: 0.33
-  spinSpeed: 0.5
+  spinSpeed: 0.3
   currentSpinResult: 
   currentAction: 

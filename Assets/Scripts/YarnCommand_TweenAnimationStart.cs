@@ -113,18 +113,28 @@ public class YarnCommand_TweenAnimationStart : MonoBehaviour
 
     private static void Trigger(DOTweenTimeline timeline, bool reverse)
     {
+        // Always start from a fresh sequence. The timeline auto-kills its sequence after a
+        // normal play, but a reverse leaves one alive - killing here keeps both paths clean.
+        if (timeline.Sequence != null && timeline.Sequence.IsActive())
+        {
+            timeline.Sequence.Kill();
+        }
+
         if (!reverse)
         {
             timeline.DOPlay();
             return;
         }
 
-        // Generate/play the sequence, jump to its end (paused), then play it backwards.
+        // Build + play the sequence, then reverse it end -> start.
         Sequence seq = timeline.Play();
-        if (seq != null)
+        if (seq == null)
         {
-            seq.Goto(seq.Duration(), false);
-            seq.PlayBackwards();
+            return;
         }
+
+        seq.SetAutoKill(false);  // keep it alive through Complete + the backward play
+        seq.Complete(false);     // snap to the end (no callbacks) - reliable even on a fresh tween
+        seq.PlayBackwards();     // play from end back to start
     }
 }

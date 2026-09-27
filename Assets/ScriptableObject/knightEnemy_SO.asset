@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: knightEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
   enemyName: Oreon
-  maxHP: 1
+  maxHP: 5
   currentHP: 0
   enemyDescription: A very tanky knight
   enemyBattleSprite:
