@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 2958262985454349543}
   lineText: {fileID: 2958262986520364888}
-  showCharacterNameInLineView: 1
+  showCharacterNameInLine: 1
   characterNameText: {fileID: 2958262987206614838}
   characterNameContainer: {fileID: 0}
   useFadeEffect: 1
@@ -117,8 +117,11 @@ MonoBehaviour:
   fadeDownDuration: 0.1
   autoAdvance: 0
   autoAdvanceDelay: 1
-  useTypewriterEffect: 1
-  typewriterEffectSpeed: 60
+  typewriterStyle: 1
+  lettersPerSecond: 60
+  wordsPerSecond: 10
+  customTypewriter:
+    targetObject: {fileID: 0}
   eventHandlers:
   - {fileID: 8877867826578261527}
 --- !u!1 &2958262986393358530
@@ -452,6 +455,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -588,6 +592,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -794,6 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3859336324316773514}
   - component: {fileID: 3859336324316773513}
+  - component: {fileID: 267373260997879857}
   m_Layer: 0
   m_Name: Line Advancer
   m_TagString: Untagged
@@ -830,18 +836,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 8309902628685535410}
   presenter: {fileID: 2958262985454349548}
+  separateHurryUpAndAdvanceControls: 0
   multiAdvanceIsCancel: 0
   advanceRequestsBeforeCancellingLine: 2
   inputMode: 1
-  hurryUpLineAction: {fileID: 0}
-  nextLineAction: {fileID: 0}
-  cancelDialogueAction: {fileID: 0}
-  enableActions: 1
-  hurryUpLineAxis: Jump
-  nextLineAxis: Cancel
-  cancelDialogueAxis: 
+  hasTransferredLegacyMapping: 1
+  legacyHurryUpLineAction: {fileID: 0}
+  legacyNextLineAction: {fileID: 0}
+  legacyHurryUpOptionsAction: {fileID: 0}
+  legacyCancelDialogueAction: {fileID: 0}
+  legacyEnableActions: 1
+  legacyHurryUpLineAxis: Jump
+  legacyNextLineAxis: Cancel
+  legacyHurryUpOptionsAxis: Jump
+  legacyCancelDialogueAxis: 
+  legacyHurryUpLineKeyCode: 32
+  legacyNextLineKeyCode: 27
+  legacyHurryUpOptionsKeyCode: 32
+  legacyCancelDialogueKeyCode: 0
+--- !u!114 &267373260997879857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859336324316773512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad15240c88dde41159620e5f27277386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.LineAdvancerInput.KeyCodes
+  lineAdvancer: {fileID: 3859336324316773513}
   hurryUpLineKeyCode: 32
   nextLineKeyCode: 27
+  hurryUpOptionsKeyCode: 32
   cancelDialogueKeyCode: 0
 --- !u!1 &7262066351540048079
 GameObject:
@@ -900,9 +928,11 @@ MonoBehaviour:
   - {fileID: 2958262985454349548}
   - {fileID: 8020628925107869960}
   - {fileID: 3859336324316773513}
+  verboseLogging: 0
   autoStart: 0
   startNode: Start
   runSelectedOptionAsLine: 0
+  allowOptionFallthrough: 1
   onNodeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -1247,6 +1277,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

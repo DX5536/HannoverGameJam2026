@@ -1,0 +1,68 @@
+﻿title: Prologue
+color: blue
+position: -140,-40
+---
+This is a story of a simple adventurer who aim to defeat the ultimate cookie!
+<<PlayTimelineDelayed "BlackScreen_IMG" 0.5>>
+<<jump Chapter1_0>>
+===
+
+title: Chapter1_0
+position: -380,180
+---
+Sir Oreon: HOLD IT! Who are you and why do you want to enter this domain?
+-> I couldn't help but shivers at his voice
+    Adventurer: [shake]I-I-I-[/shake]
+    Sir Oreon: SPEAK UP!!
+    <<SetScissorsValue 0.5>>
+-> Introduce yourself
+    Adventurer: I am here for the duel with the ultimate cookie! Now get out.
+    Sir Oreon: Foolish beings...
+    Sir Oreon: You dare to challenge the ultimate cookie?!
+    <<SetPaperalue 0.5>>
+-> Ignore him
+    You try to shove him away. 
+    <<PlayTimeline "enemyStorySprite_Shake_Anim">>
+    However the man is a brick wall with his muscle.
+    <<SetRockValue 0.5>>
+<<jump Chapter1_1>>
+===
+
+title: Chapter1_1
+position: -380,338
+---
+Sir Oreon: Hmmph! You have guts, kids.
+Sir Oreon: You know what? I shall give you a chance!
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+<<StorySpriteSwap_HAPPY>>
+Sir Oreon: If you can defeat me, I shall let you pass!
+Adventurer: So do we just... beat each other up?
+Sir Oreon: Oh god no!
+<<StorySpriteSwap_MAD>>
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+Sir Oreon: We shall duel like gentlemen!
+<<StorySpriteSwap_IDLE>>
+Sir Oreon: Do you need me to explain to you how it works?
+-> Yes please!
+    Sir Oreon: Sure! It is very simple.
+    Sir Oreon: You can see there are two wheels above our head. It will decided on our action.
+    Sir Oreon: At the start of your turn, the wheel will randomly select for you.
+    Sir Oreon: Then your goal is to stop MY wheel on the tile that is advantage for you!
+    Sir Oreon: You can use the button or click E to stop. The color corresponding to rock, paper or scissor. There is an image near the button.
+    Sir Oreon: If you stop my wheel on the item weaker than you, you hit me for 1 HP.
+    Sir Oreon: If you stop my wheel on the same item as your, we both do not do any damage.
+    Sir Oreon: If you stop my wheel on the item stronger than you, I counterattack and hit you for 1 HP.
+    Adventurer: I see. What about your turn?
+    Sir Oreon: Good question! Similarly, when it is my turn, the wheel will automatically stop for me.
+    Sir Oreon: This time you have to click stop for your wheel!
+-> No, thank you.
+    <<SetSlowDownSpeed 0.1>>
+    Sir Oreon: Alright then!
+<<jump Chapter1_2>>
+===
+
+title: Chapter1_2
+position: -380,498
+---
+<size=150%><b>!!!THEN LET US START THE BATTLE!!!</b></size=150%>
+===

@@ -1,15 +1,14 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using Yarn.Unity;
 
 /// <summary>
 /// Swaps a combatant's *story* sprite from inside a Yarn script.
 ///
-/// Registers three zero-argument Yarn commands (with the optional command prefix):
-///     &lt;&lt;SpriteSwap_IDLE&gt;&gt;
-///     &lt;&lt;SpriteSwap_MAD&gt;&gt;
-///     &lt;&lt;SpriteSwap_HAPPY&gt;&gt;
+/// Registers three zero-argument Yarn commands:
+///     &lt;&lt;StorySpriteSwap_IDLE&gt;&gt;
+///     &lt;&lt;StorySpriteSwap_MAD&gt;&gt;
+///     &lt;&lt;StorySpriteSwap_HAPPY&gt;&gt;
 ///
 /// Works for the enemy or the player: assign ONE stats asset - either an
 /// <see cref="EnemyStats_ScriptableObject"/> (reads enemyStorySprite) or a
@@ -17,9 +16,6 @@ using Yarn.Unity;
 /// Instead of remembering array indices, each command maps to a named state
 /// (IDLE / MAD / HAPPY) that matches how the sprites are named in 2DSprites.
 /// Array layout expected on either asset: 0 = idle, 1 = mad, 2 = happy.
-///
-/// If you want BOTH a player and an enemy portrait driven from Yarn at once, give each
-/// component a different Command Prefix (e.g. "Player_") so the command names don't clash.
 ///
 /// Assign either a <see cref="SpriteRenderer"/> (world space) or a UI
 /// <see cref="Image"/> (canvas) as the display target - whichever is set is used.
@@ -48,17 +44,8 @@ public class YarnCommand_SpriteSwap : MonoBehaviour
     [Tooltip("Use this when the portrait is a UI Image on a Canvas.")]
     [SerializeField] private Image uiImage;
 
-    [Header("Yarn")]
-    [Tooltip("Optional prefix for the registered command names, e.g. \"Player_\" -> <<Player_SpriteSwap_IDLE>>. Leave empty for <<SpriteSwap_IDLE>>. Use a unique prefix per component if you have more than one.")]
-    [SerializeField] private string commandPrefix = "";
-
     [Tooltip("Optional. If left empty, the first DialogueRunner in the scene is used.")]
     [SerializeField] private DialogueRunner dialogueRunner;
-
-    [Header("Events (hook up SFX / animation here)")]
-    public UnityEvent onIdle;
-    public UnityEvent onMad;
-    public UnityEvent onHappy;
 
     private void Awake()
     {
@@ -76,33 +63,21 @@ public class YarnCommand_SpriteSwap : MonoBehaviour
             return;
         }
 
-        dialogueRunner.AddCommandHandler(commandPrefix + "SpriteSwap_IDLE", SpriteSwap_IDLE);
-        dialogueRunner.AddCommandHandler(commandPrefix + "SpriteSwap_MAD", SpriteSwap_MAD);
-        dialogueRunner.AddCommandHandler(commandPrefix + "SpriteSwap_HAPPY", SpriteSwap_HAPPY);
+        dialogueRunner.AddCommandHandler("StorySpriteSwap_IDLE", StorySpriteSwap_IDLE);
+        dialogueRunner.AddCommandHandler("StorySpriteSwap_MAD", StorySpriteSwap_MAD);
+        dialogueRunner.AddCommandHandler("StorySpriteSwap_HAPPY", StorySpriteSwap_HAPPY);
     }
 
     // --- Yarn commands ---------------------------------------------------
 
-    /// <summary><c>&lt;&lt;SpriteSwap_IDLE&gt;&gt;</c></summary>
-    public void SpriteSwap_IDLE()
-    {
-        Apply(StoryState.IDLE);
-        onIdle?.Invoke();
-    }
+    /// <summary><c>&lt;&lt;StorySpriteSwap_IDLE&gt;&gt;</c></summary>
+    public void StorySpriteSwap_IDLE() => Apply(StoryState.IDLE);
 
-    /// <summary><c>&lt;&lt;SpriteSwap_MAD&gt;&gt;</c></summary>
-    public void SpriteSwap_MAD()
-    {
-        Apply(StoryState.MAD);
-        onMad?.Invoke();
-    }
+    /// <summary><c>&lt;&lt;StorySpriteSwap_MAD&gt;&gt;</c></summary>
+    public void StorySpriteSwap_MAD() => Apply(StoryState.MAD);
 
-    /// <summary><c>&lt;&lt;SpriteSwap_HAPPY&gt;&gt;</c></summary>
-    public void SpriteSwap_HAPPY()
-    {
-        Apply(StoryState.HAPPY);
-        onHappy?.Invoke();
-    }
+    /// <summary><c>&lt;&lt;StorySpriteSwap_HAPPY&gt;&gt;</c></summary>
+    public void StorySpriteSwap_HAPPY() => Apply(StoryState.HAPPY);
 
     // --- Internal --------------------------------------------------------
 

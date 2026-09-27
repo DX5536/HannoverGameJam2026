@@ -11,5 +11,37 @@
     "baseLanguage": "en",
     "compilerOptions": {
         "diagnosticsSeverity": {}
-    }
+    },
+    "editorOptions": {
+        "yarnScriptEditor": {
+            "characters": [
+                {
+                    "name": "Sir Oreon",
+                    "colour": "#1449A0"
+                },
+                {
+                    "name": "lady Waphelina",
+                    "colour": "#FFAD00"
+                },
+                {
+                    "name": "Gottfried Wilhelm Leibniz",
+                    "colour": "#9F1B3F"
+                },
+                {
+                    "name": "Adventurer",
+                    "colour": "#6B7C83"
+                }
+            ],
+            "startNode": "Prologue",
+            "projectGraphPositions": {
+                "Chapter1.yarn": {
+                    "x": -320,
+                    "y": -220
+                }
+            }
+        }
+    },
+    "definitions": [
+        "..\\..\\ProjectSettings\\Packages\\dev.yarnspinner\\Assembly-CSharp-generated.ysls.json"
+    ]
 }
