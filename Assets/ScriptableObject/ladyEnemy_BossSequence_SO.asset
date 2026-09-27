@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b070712ba0c8be146a3e05c09a33e8e6, type: 3}
   m_Name: ladyEnemy_BossSequence_SO
   m_EditorClassIdentifier: Assembly-CSharp::BossSequence_ScriptableObject
-  mode: 1
+  mode: 2
   firstAttacker: 0
   customOrder: 0000000001000000
-  loopCustomOrder: 1
+  afterList: 0
   randomEnemyChance: 0.5
   delayBetweenTurns: 0.5

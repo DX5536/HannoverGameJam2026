@@ -1245,11 +1245,11 @@ MonoBehaviour:
       m_Calls: []
   slices:
   - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
-    weight: 0.5
+    weight: 0.33
   - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
-    weight: 0.24626866
+    weight: 0.33
   - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
-    weight: 0.25373134
+    weight: 0.34
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
   highlightPopDistance: 16
@@ -1592,6 +1592,163 @@ Transform:
   m_Children: []
   m_Father: {fileID: 515849535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &865830660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865830661}
+  - component: {fileID: 865830663}
+  - component: {fileID: 865830662}
+  m_Layer: 5
+  m_Name: enemyStorySprite_Fade_Anim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &865830661
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830660}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 979470847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &865830662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DOTweenPro.Scripts::DG.Tweening.DOTweenAnimation
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 0
+  targetGO: {fileID: 665676963}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 3
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 1
+  autoGenerate: 0
+  isActive: 1
+  isValid: 1
+  target: {fileID: 665676965}
+  animationType: 7
+  targetType: 3
+  forcedTargetType: 0
+  autoPlay: 1
+  useTargetAsV3: 0
+  endValueFloat: 0
+  endValueV3: {x: 0, y: -30, z: 0}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalBool1: 1
+  optionalFloat0: 0
+  optionalInt0: 10
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
+  optionalString: 
+--- !u!114 &865830663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865830660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8cb1412b7044e9a53743bbdcadbe4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dott::Dott.DOTweenTimeline
 --- !u!21 &884687476
 Material:
   serializedVersion: 8
@@ -2447,7 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9b74d317e1ec046aa01d70e4246eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnCommand_SpriteSwap
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
   playerStats: {fileID: 0}
   spriteRenderer: {fileID: 0}
   uiImage: {fileID: 665676965}
@@ -2485,6 +2642,7 @@ RectTransform:
   - {fileID: 1343241990}
   - {fileID: 237657169}
   - {fileID: 2009878669}
+  - {fileID: 865830661}
   - {fileID: 1777156475}
   m_Father: {fileID: 1225701991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2974,7 +3132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPBar
   slider: {fileID: 1212882497}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
   playerStats: {fileID: 0}
   tweenDuration: 0.2
   tweenEase: 6
@@ -3394,7 +3552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9675ba4fa3db75a4492bbfe2e0ae3141, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b46f6d281949f0b4f8f7357e528f54d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5807,7 +5965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: Prologue
+      value: Chapter3_Prologue
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -6509,11 +6667,11 @@ MonoBehaviour:
       m_Calls: []
   slices:
   - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
-    weight: 0.5
+    weight: 0.33
   - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
-    weight: 0.3
+    weight: 0.34
   - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
-    weight: 0.2
+    weight: 0.33
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
   highlightPopDistance: 16
@@ -7718,7 +7876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1955287497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11516,6 +11674,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3208817291626332853, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9442e1e6ea58aee42af7507d2da7a592, type: 3}
     - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: arrow
       value: 
@@ -11528,6 +11690,10 @@ PrefabInstance:
       propertyPath: combatant
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: enemyStats
+      value: 
+      objectReference: {fileID: 11400000, guid: dfa2217cafe2de7458d7839743085d48, type: 2}
     - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: onAttackHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

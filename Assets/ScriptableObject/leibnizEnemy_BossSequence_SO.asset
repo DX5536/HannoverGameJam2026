@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: leibnizEnemy_BossSequence_SO
   m_EditorClassIdentifier: Assembly-CSharp::BossSequence_ScriptableObject
   mode: 1
-  firstAttacker: 0
-  customOrder: 0000000001000000
-  loopCustomOrder: 1
+  firstAttacker: 1
+  customOrder: 010000000100000001000000010000000000000001000000010000000000000001000000
+  afterList: 1
   randomEnemyChance: 0.5
   delayBetweenTurns: 0.5

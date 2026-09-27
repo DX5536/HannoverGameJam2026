@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ladyEnemy_SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
   enemyName: Waphelina
-  enemyHP: 3
+  maxHP: 3
+  currentHP: 5
   enemyDescription: Lady waffle
   enemyBattleSprite:
   - {fileID: 21300000, guid: 1d9c8deaafbca644b8b00c25a7950eea, type: 3}
