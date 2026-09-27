@@ -1245,11 +1245,11 @@ MonoBehaviour:
       m_Calls: []
   slices:
   - color: {r: 0.11764706, g: 0.53333336, b: 0.8980392, a: 1}
-    weight: 0.5
+    weight: 0.33
   - color: {r: 0.84705883, g: 0.105882354, b: 0.3764706, a: 1}
-    weight: 0.24626866
+    weight: 0.33
   - color: {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
-    weight: 0.25373134
+    weight: 0.34
   innerRadiusRatio: 0.6
   segmentsPerCircle: 180
   highlightPopDistance: 16
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9b74d317e1ec046aa01d70e4246eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YarnCommand_SpriteSwap
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
   playerStats: {fileID: 0}
   spriteRenderer: {fileID: 0}
   uiImage: {fileID: 665676965}
@@ -2974,7 +2974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPBar
   slider: {fileID: 1212882497}
-  enemyStats: {fileID: 11400000, guid: 9fd768c45e1f79d499776b9581b09226, type: 2}
+  enemyStats: {fileID: 11400000, guid: 20fce97770a4ee54fae3fbfe89a6a97d, type: 2}
   playerStats: {fileID: 0}
   tweenDuration: 0.2
   tweenEase: 6
@@ -3480,7 +3480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343241991
@@ -5807,7 +5807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: Prologue
+      value: Chapter2_Prologue
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -7718,7 +7718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1955287497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11516,6 +11516,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3208817291626332853, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d9c8deaafbca644b8b00c25a7950eea, type: 3}
     - target: {fileID: 5864376416713445709, guid: d9be443349dbaba45a08eeb9e9471def, type: 3}
       propertyPath: arrow
       value: 

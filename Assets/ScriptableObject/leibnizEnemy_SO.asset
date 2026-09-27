@@ -27,6 +27,6 @@ MonoBehaviour:
   enemyRockValue: 0.33
   enemyPaperValue: 0.34
   enemyScissorsValue: 0.33
-  spinSpeed: 0.3
+  spinSpeed: 0.5
   currentSpinResult: 
   currentAction: Lose
