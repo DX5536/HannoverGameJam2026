@@ -1,0 +1,207 @@
+﻿title: Prologue
+color: blue
+position: -380,-40
+---
+This is a story of a simple adventurer who aim to defeat the ultimate cookie!
+<<PlayTimelineDelayed "BlackScreen_IMG" 0.5>>
+<<jump Chapter1_0>>
+===
+
+title: Chapter1_0
+position: -380,180
+---
+Sir Oreon: HOLD IT! Who are you and why do you want to enter this domain?
+-> I couldn't help but shivers at his voice
+    Adventurer: [shake]I-I-I-[/shake]
+    Sir Oreon: SPEAK UP!!
+    Adventurer: I WANT TO FIGHT!
+    <<SetScissorsValue 0.5>>
+-> Introduce yourself
+    Adventurer: I am here for the duel with the ultimate cookie! Now get out.
+    Sir Oreon: Foolish beings...
+    Sir Oreon: You dare to challenge the ultimate cookie?!
+    <<SetPaperValue 0.5>>
+-> Ignore him
+    You try to shove him away. 
+    <<PlayTimeline "enemyStorySprite_Shake_Anim">>
+    However the man is a brick wall with his muscle.
+    <<SetRockValue 0.5>>
+<<jump Chapter1_1>>
+===
+
+title: Chapter1_1
+position: -380,338
+---
+Sir Oreon: Hmmph! You have guts, kids.
+Sir Oreon: You know what? I shall give you a chance!
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+<<StorySpriteSwap_HAPPY>>
+Sir Oreon: If you can defeat me, I shall let you pass!
+Adventurer: So do we just... beat each other up?
+Sir Oreon: Oh god no!
+<<StorySpriteSwap_MAD>>
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+Sir Oreon: We shall duel like gentlemen!
+<<StorySpriteSwap_IDLE>>
+Sir Oreon: Do you need me to explain to you how it works?
+-> Yes please!
+    Sir Oreon: Sure! It is very simple.
+    <<PlayTimeline TutorialDisplay_IMG>>
+    Sir Oreon: You can see there are two wheels above our head. It will decided on our action.
+    Sir Oreon: At the start of your turn, the wheel will randomly select for you.
+    Sir Oreon: Then your goal is to stop MY wheel on the tile that is advantage for you!
+    Sir Oreon: You can use the button or click E to stop. The color corresponding to rock, paper or scissor. There is an image near the button.
+    Sir Oreon: If you stop my wheel on the item weaker than you, you hit me for 1 HP.
+    Sir Oreon: If you stop my wheel on the same item as your, we both do not do any damage.
+    Sir Oreon: If you stop my wheel on the item stronger than you, I counterattack and hit you for 1 HP.
+    Adventurer: I see. What about your turn?
+    Sir Oreon: Good question! Similarly, when it is my turn, the wheel will automatically stop for me.
+    <<PlayTimelineReverse TutorialDisplay_IMG>>
+    Sir Oreon: This time you have to click stop for your wheel!
+-> No, thank you.
+    <<SetSlowDownSpeed 0.1>>
+    Sir Oreon: Alright then!
+<<jump Chapter1_2>>
+===
+
+title: Chapter1_2
+position: -380,498
+---
+<size=150%><b>!!!THEN LET US START THE BATTLE!!!</b></size=150%>
+<<PlayTimeline storyPanel_Hide_Anim>>
+===
+
+title: Chapter2_Prologue
+color: yellow
+position: -40,-40
+---
+And so, the our brave adventurer defeated the great knight Sir Oreon.
+However their next challenger might be... Unpredictable...
+<<PlayTimelineDelayed "BlackScreen_IMG" 0.5>>
+<<jump Chapter2_0>>
+===
+
+title: Chapter2_0
+position: -40,118
+---
+Lady Waphelina: Who dare to enter my castle?
+<<StorySpriteSwap_MAD>>
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+Lady Waphelina: Did that useless piece of muscle failed to protect the gate
+->  I gently correct her
+    Adventurer: Well, Sir Oreon was a kind gentleman I assured you
+    Adventurer: He introduce me to the wonderful world of dueling...
+    <i>And so you keep on talking and talking until she is angry</i>
+    <<SetRockValue 0.5>>
+    Lady Waphelina: [shake]<size=200%>ENOUGH!</size=200%>[/shake]
+    Lady Waphelina: One more word and I shall send you to the dungeon!
+    -> I reluctantly shut up
+    <<StorySpriteSwap_HAPPY>>
+    Lady Waphelina: That's more like it!
+    -> I proceed to defend him again
+    Lady Waphelina: That is IT!
+    <<jump Chapter2_2>>
+-> I decided to stay quiet
+    Lady Waphelina: Oh? Awefully quiet for an intruder by the front door...
+    Lady Waphelina: Cat got your tongue?
+    <<SetPaperValue 0.5>>
+    Adventurer: Ehhhh... Just not my issue, you know?
+<<jump Chapter2_1>>
+===
+
+title: Chapter2_1
+position: 160,320
+---
+<<StorySpriteSwap_IDLE>>
+Lady Waphelina: Anyhow... You are intruding my place.
+Lady Waphelina: Probably one of those dumb challenger who want to duel "the ultimate cookie".
+At her mention, I couldn't help but flinch.
+Lady Waphelina: I knew it. But let me tell you, they are... not your small fry.
+<<StorySpriteSwap_HAPPY>>
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+Lady Waphelina: Defeat me, and I shall grant you the passage.
+Lady Waphelina: Think of it as a test before the ultimate cookie...
+<<jump Chapter2_2>>
+===
+
+title: Chapter2_2
+position: -40,500
+---
+<size=150%><b>!!!PREPARE YOURSELF!!!</b></size=150%>
+<<PlayTimeline storyPanel_Hide_Anim>>
+===
+
+title: Chapter3_Prologue
+color: red
+position: 420,-40
+---
+And so Lady Waphelina's chaotic dance concludes.
+Now... I shall face <size=150%> the ultimate cookie</size=150%>...
+<<PlayTimelineDelayed "BlackScreen_IMG" 0.5>>
+<<jump Chapter3_0>>
+===
+
+title: Chapter3_0
+position: 420,140
+---
+Adventurer: <size=200%>HUH?! </size=200%>
+Adventurer: W-Who are you?
+Gottfried Wilhelm Leibniz: Oh dear... Where am I?
+<<StorySpriteSwap_MAD>>
+<<PlayTimeline "enemyStorySprite_Jump_Anim">>
+Gottfried Wilhelm Leibniz: I was just about to tear that Newton guy to shred...
+Gottfried Wilhelm Leibniz: Plagiarize my buttocks...
+-> I tries to get his attention
+    Adventurer: Uhm... Hello?
+    Gottfried Wilhelm Leibniz: Well hello to you too.
+    <<StorySpriteSwap_HAPPY>>
+    <<PlayTimeline "enemyStorySprite_Jump_Anim">>
+    <<SetSlowDownSpeed 0.2>>
+-> I tap his shoulder
+    Adventurer: Hello? Excuse me?
+    Gottfried Wilhelm Leibniz: Mein Gott!!!
+    Gottfried Wilhelm Leibniz: You are scaring me!
+    <<StorySpriteSwap_IDLE>>
+    <<PlayTimeline "enemyStorySprite_Jump_Anim">>
+    <<SetSlowDownSpeed 0.1>>
+Adventurer: So, good sir. I am looking for the ultimate cookie.
+Adventurer: Do you know where it is?
+<<StorySpriteSwap_IDLE>>
+Gottfried Wilhelm Leibniz: The ultimate cookie?
+Gottfried Wilhelm Leibniz: I do not see any "ultimate cookie"
+Gottfried Wilhelm Leibniz: But I did saw a little Butterkeks running around here.
+Adventurer: Butterkeks?
+Gottfried Wilhelm Leibniz: Ah yes, you would call it "biscuit" or "cookie".
+
+<<jump Chapter3_1>>
+===
+
+title: Chapter3_1
+position: 420,320
+---
+Adventurer: WHERE???
+You try to look around but see no one.
+Gottfried Wilhelm Leibniz: We communicated... It decided to go home to do something.
+<<StorySpriteSwap_HAPPY>>
+Gottfried Wilhelm Leibniz: Maybe it will be back.
+And so I waited for my ultimate opponent. Suddenly the man before me slowly disappear...
+<<PlayTimeline "enemyStorySprite_Fade_Anim">>
+Gottfried Wilhelm Leibniz: Oh, guess time is up for me...
+<<StorySpriteSwap_IDLE>>
+Gottfried Wilhelm Leibniz: I wish you good luck. My little Butterkeks friend has quite a nasty temper.
+Adventurer: Wait-!
+And so he is gone...
+<<jump Chapter3_2>>
+===
+
+title: Chapter3_2
+position: 420,540
+---
+From the distance I see the Ultimate Cookie happily return.
+It is even has an awfully familiar wig on...
+The moment it sees the good sir disappear, it runs towards my direction
+Adventurer: W-W-Wait-! I didn't-
+The Ultimate Cookie looks very mad.
+<size=150%><b>!!!It seems I can't reason with it!!!</b></size=150%>
+<<PlayTimeline storyPanel_Hide_Anim>>
+===

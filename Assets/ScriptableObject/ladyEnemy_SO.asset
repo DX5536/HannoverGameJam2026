@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a811706e0e34b844beff3a607056db5, type: 3}
+  m_Name: ladyEnemy_SO
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStats_ScriptableObject
+  enemyName: Waphelina
+  maxHP: 3
+  currentHP: 3
+  enemyDescription: Lady waffle
+  enemyBattleSprite:
+  - {fileID: 21300000, guid: 1d9c8deaafbca644b8b00c25a7950eea, type: 3}
+  - {fileID: 21300000, guid: 151c2366092add942aa1ba1b87a34b1d, type: 3}
+  enemyStorySprite:
+  - {fileID: 21300000, guid: d5bc636a5a6a519468e550d912683395, type: 3}
+  - {fileID: 21300000, guid: 9adf51ec2ded0ed438d0808022b5c97c, type: 3}
+  - {fileID: 21300000, guid: e8d928e8b3b2a9f4c96443919b315776, type: 3}
+  enemyTips: []
+  enemyRockValue: 0.25
+  enemyPaperValue: 0.35
+  enemyScissorsValue: 0.4
+  spinSpeed: 0.5
+  currentSpinResult: Paper
+  currentAction: Tie
