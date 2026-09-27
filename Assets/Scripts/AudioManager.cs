@@ -7,6 +7,10 @@ using UnityEngine;
 ///
 /// Put this on one GameObject in the scene, assign the clips, and (optionally) an
 /// AudioSource - one is added automatically if you don't.
+///
+/// Duplicates (e.g. the copy in a battle scene when the Main Menu's persistent manager is
+/// already alive) are NOT destroyed: they stay as silent forwarders, so UnityEvents wired to
+/// the scene's own copy still reach the persistent <see cref="Instance"/>.
 /// </summary>
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
@@ -58,17 +62,25 @@ public class AudioManager : MonoBehaviour
     private float musicVolume01 = 1f;
 
     /// <summary>Current SFX slider value (0-1).</summary>
-    public float SfxVolume01 => sfxVolume01;
+    public float SfxVolume01 => Main.sfxVolume01;
 
     /// <summary>Current Music slider value (0-1).</summary>
-    public float MusicVolume01 => musicVolume01;
+    public float MusicVolume01 => Main.musicVolume01;
+
+    /// <summary>The manager that actually plays audio: the persistent instance, or this one if none exists.</summary>
+    private AudioManager Main => Instance != null ? Instance : this;
 
     private void Awake()
     {
-        // Enforce a single instance.
+        // Enforce a single instance. A duplicate is kept (not destroyed) as a silent forwarder:
+        // the scene's UnityEvents point at it, and destroying it would silently drop those calls.
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            foreach (AudioSource source in GetComponents<AudioSource>())
+            {
+                source.playOnAwake = false;
+                source.enabled = false;
+            }
             return;
         }
         Instance = this;
@@ -101,6 +113,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        if (Main != this)
+        {
+            return; // forwarder - the persistent instance already handles its own BGM
+        }
+
         if (playStandardBgmOnStart && standardBGM != null)
         {
             PlayStandardBGM();
@@ -117,25 +134,30 @@ public class AudioManager : MonoBehaviour
 
     // --- Public methods (call from code or UnityEvents) ------------------
 
-    public void PlayButtonPress() => Play(buttonPress);
+    public void PlayButtonPress() => Main.Play(Main.buttonPress);
 
-    public void PlayAttackSFX() => Play(attackSFX);
+    public void PlayAttackSFX() => Main.Play(Main.attackSFX);
 
-    public void PlayBlockSFX() => Play(blockSFX);
+    public void PlayBlockSFX() => Main.Play(Main.blockSFX);
 
-    public void PlayDamageSFX() => Play(damageSFX);
+    public void PlayDamageSFX() => Main.Play(Main.damageSFX);
 
     // --- Music (call from code or UnityEvents) ---------------------------
 
     /// <summary>Plays the standard / exploration BGM (does nothing if it's already playing).</summary>
-    public void PlayStandardBGM() => PlayMusic(standardBGM);
+    public void PlayStandardBGM() => Main.PlayMusic(Main.standardBGM);
 
     /// <summary>Plays the combat BGM (does nothing if it's already playing).</summary>
-    public void PlayCombatBGM() => PlayMusic(combatBGM);
+    public void PlayCombatBGM() => Main.PlayMusic(Main.combatBGM);
 
     /// <summary>Switches the music channel to a specific track and loops it.</summary>
     public void PlayMusic(AudioClip clip)
     {
+        if (Main != this)
+        {
+            Main.PlayMusic(clip);
+            return;
+        }
         if (clip == null || musicSource == null)
         {
             return;
@@ -152,6 +174,11 @@ public class AudioManager : MonoBehaviour
     /// <summary>Stops the background music.</summary>
     public void StopBGM()
     {
+        if (Main != this)
+        {
+            Main.StopBGM();
+            return;
+        }
         if (musicSource != null)
         {
             musicSource.Stop();
@@ -163,6 +190,11 @@ public class AudioManager : MonoBehaviour
     /// <summary>Sets the SFX volume from a 0-1 slider value (scaled by sfxMaxVolume) and saves it.</summary>
     public void SetSfxVolume01(float value01)
     {
+        if (Main != this)
+        {
+            Main.SetSfxVolume01(value01);
+            return;
+        }
         sfxVolume01 = Mathf.Clamp01(value01);
         if (sfxSource != null)
         {
@@ -174,6 +206,11 @@ public class AudioManager : MonoBehaviour
     /// <summary>Sets the music volume from a 0-1 slider value (scaled by musicMaxVolume) and saves it.</summary>
     public void SetMusicVolume01(float value01)
     {
+        if (Main != this)
+        {
+            Main.SetMusicVolume01(value01);
+            return;
+        }
         musicVolume01 = Mathf.Clamp01(value01);
         if (musicSource != null)
         {
